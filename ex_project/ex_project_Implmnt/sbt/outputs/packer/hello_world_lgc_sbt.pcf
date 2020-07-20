@@ -1,0 +1,169 @@
+set_location IN_MUX_bfv_1_14_0_ 1 14 0 #ICE_CARRY_IN_MUX
+set_location IN_MUX_bfv_1_15_0_ 1 15 0 #ICE_CARRY_IN_MUX
+set_location IN_MUX_bfv_1_16_0_ 1 16 0 #ICE_CARRY_IN_MUX
+set_location asd.timer[1] 2 15 2 #SB_DFFSR
+set_location asd.r_disp1_2_6_0_.m26 2 16 4 #SB_LUT4
+set_location asd.timer_RNO[3] 1 14 2 #SB_LUT4
+set_location asd.r_disp2_2_6_0_.m26 2 16 1 #SB_LUT4
+set_location asd.r_disp2_2_6_0_.m14 5 16 0 #SB_LUT4
+set_location asd.timer_RNO[4] 1 14 3 #SB_LUT4
+set_location asd.r_disp1_2_6_0_.m10 1 12 7 #SB_LUT4
+set_location asd.current_time_RNO_0[5] 2 14 0 #SB_LUT4
+set_location asd.un5_timer_cry_5_c 1 14 4 #SB_CARRY
+set_location asd.current_time[1] 2 13 7 #SB_DFFSR
+set_location asd.timer_RNIRVV31[14] 2 14 7 #SB_LUT4
+set_location asd.r_disp2_2_6_0_.m5 2 16 2 #SB_LUT4
+set_location asd.un5_timer_cry_6_c 1 14 5 #SB_CARRY
+set_location asd.un5_timer_cry_20_c 1 16 3 #SB_CARRY
+set_location asd.timer_RNO[9] 1 15 0 #SB_LUT4
+set_location asd.timer_RNO_0[19] 1 16 2 #SB_LUT4
+set_location asd.r_disp1_i[2] 4 16 1 #SB_DFF
+set_location asd.r_disp1_2_6_0_.m5 4 16 5 #SB_LUT4
+set_location asd.current_time[6] 2 13 1 #SB_DFFSR
+set_location asd.un5_timer_cry_1_c 1 14 0 #SB_CARRY
+set_location asd.timer_RNO[12] 1 13 3 #SB_LUT4
+set_location asd.timer[13] 1 13 4 #SB_DFFSR
+set_location asd.current_time_RNO[6] 2 13 1 #SB_LUT4
+set_location asd.current_time_RNI17HH[2] 2 14 2 #SB_LUT4
+set_location asd.timer_RNI5C6E1[15] 2 14 6 #SB_LUT4
+set_location asd.timer[6] 2 15 7 #SB_DFFSR
+set_location asd.r_disp1_2_6_0_.r_disp1_2_i[5] 2 16 0 #SB_LUT4
+set_location asd.un5_timer_cry_8_c 1 14 7 #SB_CARRY
+set_location asd.un5_timer_cry_22_c 1 16 5 #SB_CARRY
+set_location asd.timer_RNO[5] 1 14 4 #SB_LUT4
+set_location asd.timer[20] 2 15 3 #SB_DFFSR
+set_location asd.r_disp2_i[0] 2 16 2 #SB_DFF
+set_location asd.r_disp1_i[6] 2 16 4 #SB_DFF
+set_location asd.current_time_RNO_0[4] 2 14 3 #SB_LUT4
+set_location asd.timer_RNO[15] 1 15 6 #SB_LUT4
+set_location asd.timer_RNO_0[14] 1 15 5 #SB_LUT4
+set_location asd.timer[16] 1 13 6 #SB_DFFSR
+set_location asd.current_time_RNO[3] 2 13 4 #SB_LUT4
+set_location asd.current_time[2] 2 14 1 #SB_DFFSR
+set_location asd.timer_RNO_0[22] 1 16 5 #SB_LUT4
+set_location asd.timer[3] 1 14 2 #SB_DFFSR
+set_location asd.un5_timer_cry_11_c 1 15 2 #SB_CARRY
+set_location asd.un5_timer_cry_2_c 1 14 1 #SB_CARRY
+set_location asd.timer_RNO[1] 2 15 2 #SB_LUT4
+set_location asd.timer_RNO_0[11] 1 15 2 #SB_LUT4
+set_location asd.timer[24] 2 15 6 #SB_DFFSR
+set_location asd.r_disp2_i[4] 5 16 2 #SB_DFF
+set_location asd.current_time_RNIF9FV7[0] 2 13 6 #SB_LUT4
+set_location asd.current_time[7] 2 13 3 #SB_DFFSR
+set_location asd.un5_timer_cry_17_c 1 16 0 #SB_CARRY
+set_location asd.timer_RNO[22] 2 15 5 #SB_LUT4
+set_location asd.timer_RNO[11] 1 13 2 #SB_LUT4
+set_location asd.timer[8] 1 14 7 #SB_DFFSR
+set_location asd.timer[12] 1 13 3 #SB_DFFSR
+set_location asd.current_time_RNO[7] 2 13 3 #SB_LUT4
+set_location asd.timer[7] 1 14 6 #SB_DFFSR
+set_location asd.r_disp1_2_6_0_.r_disp1_2_i[4] 2 16 3 #SB_LUT4
+set_location asd.un5_timer_cry_10_c 1 15 1 #SB_CARRY
+set_location asd.timer_RNIC8QA1[17] 2 16 7 #SB_LUT4
+set_location asd.timer_RNI6AMT4[11] 2 14 5 #SB_LUT4
+set_location asd.timer[21] 2 15 4 #SB_DFFSR
+set_location asd.r_disp2_i[1] 4 14 5 #SB_DFF
+set_location asd.r_disp1_i[1] 1 12 7 #SB_DFF
+set_location asd.current_time_RNIA9RB1[5] 2 13 0 #SB_LUT4
+set_location asd.timer_RNO[14] 1 13 5 #SB_LUT4
+set_location asd.timer_RNO_0[6] 1 14 5 #SB_LUT4
+set_location asd.timer[19] 2 15 0 #SB_DFFSR
+set_location asd.current_time_RNO[0] 2 12 0 #SB_LUT4
+set_location asd.current_time[3] 2 13 4 #SB_DFFSR
+set_location GND -1 -1 -1 #GND
+set_location asd.un5_timer_cry_19_c 1 16 2 #SB_CARRY
+set_location asd.un5_timer_cry_4_c 1 14 3 #SB_CARRY
+set_location asd.un5_timer_cry_14_c 1 15 5 #SB_CARRY
+set_location asd.un5_timer_cry_12_c 1 15 3 #SB_CARRY
+set_location asd.timer_RNO[6] 2 15 7 #SB_LUT4
+set_location asd.timer_RNO_0[12] 1 15 3 #SB_LUT4
+set_location asd.timer_RNO_0[1] 2 15 1 #SB_LUT4
+set_location asd.r_disp2_i[5] 2 16 5 #SB_DFF
+set_location asd.r_disp1_i[5] 2 16 0 #SB_DFF
+set_location asd.un5_timer_cry_7_c 1 14 6 #SB_CARRY
+set_location asd.un5_timer_cry_21_c 1 16 4 #SB_CARRY
+set_location asd.timer_RNO[23] 1 16 6 #SB_LUT4
+set_location asd.timer_RNO[10] 1 15 1 #SB_LUT4
+set_location asd.timer[9] 1 15 0 #SB_DFFSR
+set_location asd.timer[15] 1 15 6 #SB_DFFSR
+set_location asd.current_time_RNO[4] 2 13 2 #SB_LUT4
+set_location asd.timer_RNO[19] 2 15 0 #SB_LUT4
+set_location asd.timer_RNO_0[21] 1 16 4 #SB_LUT4
+set_location asd.timer[0] 1 13 1 #SB_DFFSR
+set_location asd.r_disp1_2_6_0_.r_disp1_2_i[3] 4 16 4 #SB_LUT4
+set_location asd.un5_timer_cry_13_c 1 15 4 #SB_CARRY
+set_location asd.timer[22] 2 15 5 #SB_DFFSR
+set_location asd.r_disp1_i[0] 4 16 5 #SB_DFF
+set_location asd.timer_RNO[24] 2 15 6 #SB_LUT4
+set_location asd.timer_RNO[2] 1 14 1 #SB_LUT4
+set_location asd.timer_RNO_0[16] 1 15 7 #SB_LUT4
+set_location asd.timer_RNIRAC71[11] 2 14 4 #SB_LUT4
+set_location asd.timer[18] 1 13 7 #SB_DFFSR
+set_location asd.current_time_RNO[1] 2 13 7 #SB_LUT4
+set_location asd.current_time[4] 2 13 2 #SB_DFFSR
+set_location asd.un5_timer_cry_9_c 1 15 0 #SB_CARRY
+set_location asd.un5_timer_cry_23_c 1 16 6 #SB_CARRY
+set_location asd.timer_RNO_0[24] 1 16 7 #SB_LUT4
+set_location asd.timer[11] 1 13 2 #SB_DFFSR
+set_location asd.r_disp2_2_6_0_.r_disp2_2_i[5] 2 16 5 #SB_LUT4
+set_location asd.timer[4] 1 14 3 #SB_DFFSR
+set_location asd.timer_RNO[7] 1 14 6 #SB_LUT4
+set_location asd.timer_RNO_0[13] 1 15 4 #SB_LUT4
+set_location asd.r_disp2_i[2] 5 16 0 #SB_DFF
+set_location asd.r_disp1_i[4] 2 16 3 #SB_DFF
+set_location asd.timer_RNO[20] 2 15 3 #SB_LUT4
+set_location asd.timer_RNO[17] 1 16 0 #SB_LUT4
+set_location asd.timer[14] 1 13 5 #SB_DFFSR
+set_location asd.current_time_RNO[5] 2 13 5 #SB_LUT4
+set_location asd.current_time[0] 2 12 0 #SB_DFFSR
+set_location asd.timer_RNO[18] 1 13 7 #SB_LUT4
+set_location asd.timer_RNO_0[20] 1 16 3 #SB_LUT4
+set_location asd.r_disp2_2_6_0_.m10 4 14 5 #SB_LUT4
+set_location asd.timer_RNO[8] 1 14 7 #SB_LUT4
+set_location asd.timer_RNO_0[18] 1 16 1 #SB_LUT4
+set_location asd.timer[23] 1 16 6 #SB_DFFSR
+set_location asd.r_disp1_i[3] 4 16 4 #SB_DFF
+set_location asd.r_disp1_2_6_0_.m14 4 16 1 #SB_LUT4
+set_location asd.un5_timer_cry_16_c 1 15 7 #SB_CARRY
+set_location asd.r_disp2_i[6] 2 16 1 #SB_DFF
+set_location asd.current_time[5] 2 13 5 #SB_DFFSR
+set_location asd.timer_RNO[13] 1 13 4 #SB_LUT4
+set_location asd.timer[10] 1 15 1 #SB_DFFSR
+set_location asd.r_disp2_2_6_0_.r_disp2_2_i[4] 5 16 2 #SB_LUT4
+set_location asd.timer_RNIBJ341[24] 2 16 6 #SB_LUT4
+set_location asd.timer[5] 1 14 4 #SB_DFFSR
+set_location asd.un5_timer_cry_18_c 1 16 1 #SB_CARRY
+set_location asd.r_disp2_i[3] 5 16 3 #SB_DFF
+set_location asd.un5_timer_cry_3_c 1 14 2 #SB_CARRY
+set_location asd.un5_timer_cry_15_c 1 15 6 #SB_CARRY
+set_location asd.timer_RNO[21] 2 15 4 #SB_LUT4
+set_location asd.timer_RNO[16] 1 13 6 #SB_LUT4
+set_location asd.timer[17] 1 16 0 #SB_DFFSR
+set_location asd.r_disp2_2_6_0_.r_disp2_2_i[3] 5 16 3 #SB_LUT4
+set_location asd.current_time_RNO[2] 2 14 1 #SB_LUT4
+set_location asd.timer_RNIU46E1[10] 1 13 0 #SB_LUT4
+set_location asd.timer[2] 1 14 1 #SB_DFFSR
+set_location asd.timer_RNO[0] 1 13 1 #SB_LUT4
+set_io o_Segment2_F 8
+set_io o_Segment1_D 91
+set_io o_LED_1 56
+set_io o_Segment2_A 100
+set_io o_Segment1_E 90
+set_io o_Segment2_D 95
+set_io o_Segment1_F 1
+set_io o_Segment1_B 4
+set_io o_LED_3 59
+set_io i_Switch_4 52
+set_io i_Clk 15
+set_io o_Segment2_G 96
+set_io o_Segment2_C 97
+set_io o_Segment1_G 2
+set_io o_Segment1_C 93
+set_io o_LED_2 57
+set_io i_Switch_1 53
+set_io o_Segment2_B 99
+set_io i_Switch_2 51
+set_io o_Segment2_E 94
+set_io o_Segment1_A 3
+set_io o_LED_4 60
+set_io i_Switch_3 54

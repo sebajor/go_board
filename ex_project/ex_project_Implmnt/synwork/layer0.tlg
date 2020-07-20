@@ -1,0 +1,24 @@
+Selecting top level module hello_world
+@N: CG364 :"C:\Users\seba\Documents\go_board\ex_project\7_seg_counter.v":1:7:1:23|Synthesizing module seven_seg_counter in library work.
+
+	period=32'b00000001011111010111100001000000
+	zero_seg=7'b1111110
+	one_seg=7'b0110000
+	two_seg=7'b1101101
+	three_seg=7'b1111001
+	four_seg=7'b0110011
+	five_seg=7'b1011011
+	six_seg=7'b1011111
+	seven_seg=7'b1110000
+	eigth_seg=7'b1111111
+	nine_seg=7'b1111011
+	a_seg=7'b1110111
+	b_seg=7'b0011111
+	c_seg=7'b1001110
+	d_seg=7'b0111101
+	e_seg=7'b1001111
+	f_seg=7'b1000111
+   Generated name = seven_seg_counter_Z1
+
+@N: CG364 :"C:\Users\seba\Documents\go_board\ex_project\hello_world.v":1:7:1:17|Synthesizing module hello_world in library work.
+
