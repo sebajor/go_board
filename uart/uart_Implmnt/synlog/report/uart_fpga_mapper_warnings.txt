@@ -1,0 +1,5 @@
+@W: FA239 :"c:\users\seba\documents\go_board\uart\seven_seg.v":51:2:51:5|ROM r_disp2_2[6:0] (in view: work.seven_seg(verilog)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
+@W: FA239 :"c:\users\seba\documents\go_board\uart\seven_seg.v":29:2:29:5|ROM r_disp1_2[6:0] (in view: work.seven_seg(verilog)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
+@W: FA239 :"c:\users\seba\documents\go_board\uart\seven_seg.v":51:2:51:5|ROM r_disp2_2[6:0] (in view: work.seven_seg(verilog)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
+@W: FA239 :"c:\users\seba\documents\go_board\uart\seven_seg.v":29:2:29:5|ROM r_disp1_2[6:0] (in view: work.seven_seg(verilog)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
+@W: MT420 |Found inferred clock top|i_Clk with period 7.82ns. Please declare a user-defined clock on object "p:i_Clk"

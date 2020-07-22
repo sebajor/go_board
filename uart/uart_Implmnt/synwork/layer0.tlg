@@ -1,0 +1,18 @@
+Selecting top level module top
+@N: CG364 :"C:\Users\seba\Documents\go_board\uart\uart_rx.v":5:7:5:13|Synthesizing module uart_rx in library work.
+
+@N: CG364 :"C:\Users\seba\Documents\go_board\uart\seven_seg.v":1:7:1:15|Synthesizing module seven_seg in library work.
+
+@N: CG364 :"C:\Users\seba\Documents\go_board\uart\top.v":1:7:1:9|Synthesizing module top in library work.
+
+@W: CL169 :"C:\Users\seba\Documents\go_board\uart\top.v":32:1:32:6|Pruning unused register r_uart_char[7:0]. Make sure that there are no unused intermediate registers.
+@N: CL201 :"C:\Users\seba\Documents\go_board\uart\uart_rx.v":31:1:31:6|Trying to extract state machine for register state.
+Extracted state machine for register state
+State machine has 7 reachable states with original encodings of:
+   000
+   001
+   010
+   011
+   100
+   101
+   110

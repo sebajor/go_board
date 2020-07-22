@@ -1,0 +1,46 @@
+Running in Lattice mode
+
+
+Starting:    C:\lscc\iCEcube2.2017.08\synpbase\bin64\mbin\synbatch.exe
+Install:     C:\lscc\iCEcube2.2017.08\synpbase
+Hostname:    DESKTOP-N4TE8I3
+Date:        Tue Jul 21 23:35:20 2020
+Version:     L-2016.09L+ice40
+
+Arguments:   -product synplify_pro -batch uart_syn.prj
+ProductType: synplify_pro
+
+
+
+
+
+log file: "C:\Users\seba\Documents\go_board\uart\uart_Implmnt\uart.srr"
+Running: uart_Implmnt in foreground
+
+Running uart_syn|uart_Implmnt
+
+Running: compile (Compile) on uart_syn|uart_Implmnt
+# Tue Jul 21 23:35:20 2020
+
+Running: compile_flow (Compile Process) on uart_syn|uart_Implmnt
+# Tue Jul 21 23:35:20 2020
+
+Running: compiler (Compile Input) on uart_syn|uart_Implmnt
+# Tue Jul 21 23:35:20 2020
+compiler exited with errors
+Job failed on: uart_syn|uart_Implmnt
+
+Job: "compiler" terminated with error status: 2
+See log file: "C:\Users\seba\Documents\go_board\uart\uart_Implmnt\synlog\uart_compiler.srr"
+# Tue Jul 21 23:35:21 2020
+
+Return Code: 2
+Run Time:00h:00m:01s
+Complete: Compile Process on uart_syn|uart_Implmnt
+Complete: Compile on uart_syn|uart_Implmnt
+Complete: Logic Synthesis on uart_syn|uart_Implmnt
+
+exit status=2
+
+exit status=2
+

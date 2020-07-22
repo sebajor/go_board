@@ -1,0 +1,94 @@
+* ******************************************************************************
+
+* iCEcube Report
+
+* Version:            2017.08.27940
+
+* Build Date:         Sep 11 2017 16:52:36
+
+* File Generated:     Jul 21 2020 23:36:12
+
+* Purpose:            General info of design implementation
+
+* Copyright (C) 2006-2010 by Lattice Semiconductor Corp. All rights reserved.
+
+* ******************************************************************************
+
+Synthesis/Placement Summary:
+----------------------------
+    Status:  Successful
+    Runtime: 0 seconds
+
+Device Info:
+------------
+    Device Family: iCE40
+    Device:        iCE40HX1K
+    Package:       VQ100
+
+Design statistics:
+------------------
+    FFs:                  43
+    LUTs:                 70
+    RAMs:                 0
+    IOBs:                 17
+    GBs:                  1
+    PLLs:                 0
+    Warm Boots:           0
+
+Logic Resource Utilization:
+---------------------------
+    Total Logic Cells: 70/1280
+        Combinational Logic Cells: 27       out of   1280      2.10938%
+        Sequential Logic Cells:    43       out of   1280      3.35938%
+        Logic Tiles:               15       out of   160       9.375%
+    Registers: 
+        Logic Registers:           43       out of   1280      3.35938%
+        IO Registers:              0        out of   560       0
+    Block RAMs:                    0        out of   16        0%
+    Warm Boots:                    0        out of   1         0%
+    Pins:
+        Input Pins:                3        out of   72        4.16667%
+        Output Pins:               14       out of   72        19.4444%
+        InOut Pins:                0        out of   72        0%
+    Global Buffers:                1        out of   8         12.5%
+    PLLs:                          0        out of   0       
+
+IO Bank Utilization:
+--------------------
+    Bank 3: 17       out of   18        94.4444%
+    Bank 1: 0        out of   19        0%
+    Bank 0: 0        out of   19        0%
+    Bank 2: 0        out of   16        0%
+
+Detailed I/O Info:
+------------------
+    Input Pins: 
+    Pin Number  Direction  IO Standard  Pull Up  IO Bank  IO Function    Signal Name   
+    ----------  ---------  -----------  -------  -------  -----------    -----------   
+    13          Input      SB_LVCMOS    No       3        Simple Input   i_Clk         
+    24          Input      SB_LVCMOS    No       3        Simple Input   i_Switch_1    
+    25          Input      SB_LVCMOS    No       3        Simple Input   i_UART_RX     
+
+    Output Pins: 
+    Pin Number  Direction  IO Standard  Pull Up  IO Bank  IO Function    Signal Name   
+    ----------  ---------  -----------  -------  -------  -----------    -----------   
+    2           Output     SB_LVCMOS    No       3        Simple Output  o_Segment1_A  
+    3           Output     SB_LVCMOS    No       3        Simple Output  o_Segment1_B  
+    4           Output     SB_LVCMOS    No       3        Simple Output  o_Segment1_C  
+    7           Output     SB_LVCMOS    No       3        Simple Output  o_Segment1_D  
+    8           Output     SB_LVCMOS    No       3        Simple Output  o_Segment1_E  
+    9           Output     SB_LVCMOS    No       3        Simple Output  o_Segment1_F  
+    10          Output     SB_LVCMOS    No       3        Simple Output  o_Segment1_G  
+    12          Output     SB_LVCMOS    No       3        Simple Output  o_Segment2_F  
+    15          Output     SB_LVCMOS    No       3        Simple Output  o_Segment2_A  
+    16          Output     SB_LVCMOS    No       3        Simple Output  o_Segment2_B  
+    18          Output     SB_LVCMOS    No       3        Simple Output  o_Segment2_C  
+    19          Output     SB_LVCMOS    No       3        Simple Output  o_Segment2_D  
+    20          Output     SB_LVCMOS    No       3        Simple Output  o_Segment2_E  
+    21          Output     SB_LVCMOS    No       3        Simple Output  o_Segment2_G  
+
+Detailed Global Buffer Info:
+----------------------------
+    Buffer Number  IO Bank  Driven By  Fanout  Signal Name
+    -------------  -------  ---------  ------  -----------
+    4              3        IO         43      i_Clk_c_g  

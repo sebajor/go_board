@@ -1,0 +1,81 @@
+ble_pack uart_rx.timer[0]_LC_61 {uart_rx.timer[0], uart_rx.un1_timer_cry_0_c, uart_rx.timer_RNO[0]}
+ble_pack uart_rx.timer[1]_LC_62 {uart_rx.timer[1], uart_rx.un1_timer_cry_1_c, uart_rx.timer_RNO[1]}
+ble_pack uart_rx.timer[2]_LC_63 {uart_rx.timer[2], uart_rx.un1_timer_cry_2_c, uart_rx.timer_RNO[2]}
+ble_pack uart_rx.timer[3]_LC_64 {uart_rx.timer[3], uart_rx.un1_timer_cry_3_c, uart_rx.timer_RNO[3]}
+ble_pack uart_rx.timer[4]_LC_65 {uart_rx.timer[4], uart_rx.un1_timer_cry_4_c, uart_rx.timer_RNO[4]}
+ble_pack uart_rx.timer[5]_LC_66 {uart_rx.timer[5], uart_rx.un1_timer_cry_5_c, uart_rx.timer_RNO[5]}
+ble_pack uart_rx.timer[6]_LC_67 {uart_rx.timer[6], uart_rx.un1_timer_cry_6_c, uart_rx.timer_RNO[6]}
+ble_pack uart_rx.timer[7]_LC_68 {uart_rx.timer[7], uart_rx.un1_timer_cry_7_c, uart_rx.timer_RNO[7]}
+clb_pack PLB_0 {uart_rx.timer[0]_LC_61, uart_rx.timer[1]_LC_62, uart_rx.timer[2]_LC_63, uart_rx.timer[3]_LC_64, uart_rx.timer[4]_LC_65, uart_rx.timer[5]_LC_66, uart_rx.timer[6]_LC_67, uart_rx.timer[7]_LC_68}
+ble_pack uart_rx.timer[8]_LC_69 {uart_rx.timer[8], uart_rx.timer_RNO[8]}
+clb_pack PLB_1 {uart_rx.timer[8]_LC_69}
+ble_pack seven_seg.r_disp1_i[1]_LC_0 {seven_seg.r_disp1_i[1], seven_seg.r_disp1_2_6_0_.N_11_i}
+ble_pack seven_seg.r_disp1_i[2]_LC_1 {seven_seg.r_disp1_i[2], seven_seg.r_disp1_2_6_0_.m14_0}
+ble_pack seven_seg.r_disp1_i[3]_LC_2 {seven_seg.r_disp1_i[3], seven_seg.r_disp1_2_6_0_.m17_i}
+ble_pack seven_seg.r_disp1_i[5]_LC_3 {seven_seg.r_disp1_i[5], seven_seg.r_disp1_2_6_0_.m23_i}
+ble_pack seven_seg.r_disp1_i[6]_LC_4 {seven_seg.r_disp1_i[6], seven_seg.r_disp1_2_6_0_.m26_0}
+ble_pack seven_seg.r_disp1_i[0]_LC_5 {seven_seg.r_disp1_i[0], seven_seg.r_disp1_2_6_0_.m5_0}
+ble_pack seven_seg.r_disp1_i[4]_LC_6 {seven_seg.r_disp1_i[4], seven_seg.r_disp1_2_6_0_.r_disp1_2_i[4]}
+ble_pack seven_seg.r_disp2_i[1]_LC_7 {seven_seg.r_disp2_i[1], seven_seg.r_disp2_2_6_0_.N_21_i}
+clb_pack PLB_2 {seven_seg.r_disp1_i[1]_LC_0, seven_seg.r_disp1_i[2]_LC_1, seven_seg.r_disp1_i[3]_LC_2, seven_seg.r_disp1_i[5]_LC_3, seven_seg.r_disp1_i[6]_LC_4, seven_seg.r_disp1_i[0]_LC_5, seven_seg.r_disp1_i[4]_LC_6, seven_seg.r_disp2_i[1]_LC_7}
+ble_pack seven_seg.r_disp2_i[2]_LC_8 {seven_seg.r_disp2_i[2], seven_seg.r_disp2_2_6_0_.m14_0}
+ble_pack seven_seg.r_disp2_i[3]_LC_9 {seven_seg.r_disp2_i[3], seven_seg.r_disp2_2_6_0_.m17_i}
+ble_pack seven_seg.r_disp2_i[5]_LC_10 {seven_seg.r_disp2_i[5], seven_seg.r_disp2_2_6_0_.m23_i}
+ble_pack seven_seg.r_disp2_i[6]_LC_11 {seven_seg.r_disp2_i[6], seven_seg.r_disp2_2_6_0_.m26_0}
+ble_pack seven_seg.r_disp2_i[0]_LC_12 {seven_seg.r_disp2_i[0], seven_seg.r_disp2_2_6_0_.m5_0}
+ble_pack seven_seg.r_disp2_i[4]_LC_13 {seven_seg.r_disp2_i[4], seven_seg.r_disp2_2_6_0_.r_disp2_2_i[4]}
+ble_pack uart_rx.state_RNIFN942[4]_LC_34 {uart_rx.state_RNIFN942[4]}
+ble_pack uart_rx.state_RNIS2KG1[2]_LC_38 {uart_rx.state_RNIS2KG1[2]}
+clb_pack PLB_3 {seven_seg.r_disp2_i[2]_LC_8, seven_seg.r_disp2_i[3]_LC_9, seven_seg.r_disp2_i[5]_LC_10, seven_seg.r_disp2_i[6]_LC_11, seven_seg.r_disp2_i[0]_LC_12, seven_seg.r_disp2_i[4]_LC_13, uart_rx.state_RNIFN942[4]_LC_34, uart_rx.state_RNIS2KG1[2]_LC_38}
+ble_pack uart_rx.state_RNIGHJ01[6]_LC_35 {uart_rx.state_RNIGHJ01[6]}
+ble_pack uart_rx.state[6]_LC_55 {uart_rx.state[6], uart_rx.state_RNO[6]}
+ble_pack uart_rx.index_RNI8VER[2]_LC_16 {uart_rx.index_RNI8VER[2]}
+ble_pack uart_rx.state[5]_LC_54 {uart_rx.state[5], uart_rx.state_RNO[5]}
+ble_pack uart_rx.index[0]_LC_21 {uart_rx.index[0], uart_rx.index_RNO[0]}
+ble_pack uart_rx.index_RNI8VER_0[2]_LC_14 {uart_rx.index_RNI8VER_0[2]}
+ble_pack uart_rx.index_RNI8VER_1[2]_LC_15 {uart_rx.index_RNI8VER_1[2]}
+ble_pack uart_rx.index_RNI8VER_2[2]_LC_17 {uart_rx.index_RNI8VER_2[2]}
+clb_pack PLB_4 {uart_rx.state_RNIGHJ01[6]_LC_35, uart_rx.state[6]_LC_55, uart_rx.index_RNI8VER[2]_LC_16, uart_rx.state[5]_LC_54, uart_rx.index[0]_LC_21, uart_rx.index_RNI8VER_0[2]_LC_14, uart_rx.index_RNI8VER_1[2]_LC_15, uart_rx.index_RNI8VER_2[2]_LC_17}
+ble_pack uart_rx.state[0]_LC_40 {uart_rx.state[0], uart_rx.state_RNO[0]}
+ble_pack uart_rx.timer_RNIUELT[0]_LC_60 {uart_rx.timer_RNIUELT[0]}
+ble_pack uart_rx.state_iso[0]_LC_56 {uart_rx.state_iso[0], uart_rx.state_iso_RNO[0]}
+ble_pack uart_rx.state[1]_LC_45 {uart_rx.state[1], uart_rx.state_RNO[1]}
+ble_pack uart_rx.state_RNISTIG[3]_LC_39 {uart_rx.state_RNISTIG[3]}
+ble_pack uart_rx.state[3]_LC_52 {uart_rx.state[3], uart_rx.state_RNO[3]}
+ble_pack uart_rx.state_RNO_0[1]_LC_41 {uart_rx.state_RNO_0[1]}
+ble_pack uart_rx.state_RNO_0[3]_LC_43 {uart_rx.state_RNO_0[3]}
+clb_pack PLB_5 {uart_rx.state[0]_LC_40, uart_rx.timer_RNIUELT[0]_LC_60, uart_rx.state_iso[0]_LC_56, uart_rx.state[1]_LC_45, uart_rx.state_RNISTIG[3]_LC_39, uart_rx.state[3]_LC_52, uart_rx.state_RNO_0[1]_LC_41, uart_rx.state_RNO_0[3]_LC_43}
+ble_pack uart_rx.state_RNO_0[2]_LC_42 {uart_rx.state_RNO_0[2]}
+ble_pack uart_rx.state[2]_LC_49 {uart_rx.state[2], uart_rx.state_RNO[2]}
+ble_pack uart_rx.timer_RNI2PPH[8]_LC_59 {uart_rx.timer_RNI2PPH[8]}
+ble_pack uart_rx.state_RNO_1[2]_LC_46 {uart_rx.state_RNO_1[2]}
+ble_pack uart_rx.state_RNO_2[3]_LC_51 {uart_rx.state_RNO_2[3]}
+ble_pack uart_rx.state_RNO_1[3]_LC_47 {uart_rx.state_RNO_1[3]}
+ble_pack uart_rx.state_RNO_2[2]_LC_50 {uart_rx.state_RNO_2[2]}
+ble_pack uart_rx.state[4]_LC_53 {uart_rx.state[4], uart_rx.state_RNO[4]}
+clb_pack PLB_6 {uart_rx.state_RNO_0[2]_LC_42, uart_rx.state[2]_LC_49, uart_rx.timer_RNI2PPH[8]_LC_59, uart_rx.state_RNO_1[2]_LC_46, uart_rx.state_RNO_2[3]_LC_51, uart_rx.state_RNO_1[3]_LC_47, uart_rx.state_RNO_2[2]_LC_50, uart_rx.state[4]_LC_53}
+ble_pack uart_rx.state_RNO_1[4]_LC_48 {uart_rx.state_RNO_1[4]}
+ble_pack uart_rx.timer_RNI2MNN[8]_LC_58 {uart_rx.timer_RNI2MNN[8]}
+ble_pack uart_rx.timer_RNI2MNN[2]_LC_57 {uart_rx.timer_RNI2MNN[2]}
+ble_pack uart_rx.state_RNO_0[4]_LC_44 {uart_rx.state_RNO_0[4]}
+ble_pack uart_rx.index[1]_LC_22 {uart_rx.index[1], uart_rx.index_RNO[1]}
+ble_pack uart_rx.index_RNIA1FR_0[3]_LC_18 {uart_rx.index_RNIA1FR_0[3]}
+ble_pack uart_rx.index_RNIA1FR[3]_LC_20 {uart_rx.index_RNIA1FR[3]}
+ble_pack uart_rx.index_RNIA1FR_1[3]_LC_19 {uart_rx.index_RNIA1FR_1[3]}
+clb_pack PLB_7 {uart_rx.state_RNO_1[4]_LC_48, uart_rx.timer_RNI2MNN[8]_LC_58, uart_rx.timer_RNI2MNN[2]_LC_57, uart_rx.state_RNO_0[4]_LC_44, uart_rx.index[1]_LC_22, uart_rx.index_RNIA1FR_0[3]_LC_18, uart_rx.index_RNIA1FR[3]_LC_20, uart_rx.index_RNIA1FR_1[3]_LC_19}
+ble_pack uart_rx.index[2]_LC_23 {uart_rx.index[2], uart_rx.index_RNO[2]}
+ble_pack uart_rx.state_RNIK01M[5]_LC_36 {uart_rx.state_RNIK01M[5]}
+ble_pack uart_rx.state_RNIQRIG[2]_LC_37 {uart_rx.state_RNIQRIG[2]}
+ble_pack uart_rx.state_RNI6REA[4]_LC_33 {uart_rx.state_RNI6REA[4]}
+clb_pack PLB_8 {uart_rx.index[2]_LC_23, uart_rx.state_RNIK01M[5]_LC_36, uart_rx.state_RNIQRIG[2]_LC_37, uart_rx.state_RNI6REA[4]_LC_33}
+ble_pack uart_rx.index[3]_LC_24 {uart_rx.index[3], uart_rx.index_RNO[3]}
+clb_pack PLB_9 {uart_rx.index[3]_LC_24}
+ble_pack uart_rx.r_data_esr[0]_LC_25 {uart_rx.r_data_esr[0], uart_rx.r_data_esr_RNO[0]}
+ble_pack uart_rx.r_data_esr[1]_LC_26 {uart_rx.r_data_esr[1], uart_rx.r_data_esr_RNO[1]}
+ble_pack uart_rx.r_data_esr[4]_LC_29 {uart_rx.r_data_esr[4], uart_rx.r_data_esr_RNO[4]}
+ble_pack uart_rx.r_data_esr[5]_LC_30 {uart_rx.r_data_esr[5], uart_rx.r_data_esr_RNO[5]}
+ble_pack uart_rx.r_data_esr[2]_LC_27 {uart_rx.r_data_esr[2], uart_rx.r_data_esr_RNO[2]}
+ble_pack uart_rx.r_data_esr[3]_LC_28 {uart_rx.r_data_esr[3], uart_rx.r_data_esr_RNO[3]}
+ble_pack uart_rx.r_data_esr[6]_LC_31 {uart_rx.r_data_esr[6], uart_rx.r_data_esr_RNO[6]}
+ble_pack uart_rx.r_data_esr[7]_LC_32 {uart_rx.r_data_esr[7], uart_rx.r_data_esr_RNO[7]}
+clb_pack PLB_10 {uart_rx.r_data_esr[0]_LC_25, uart_rx.r_data_esr[1]_LC_26, uart_rx.r_data_esr[4]_LC_29, uart_rx.r_data_esr[5]_LC_30, uart_rx.r_data_esr[2]_LC_27, uart_rx.r_data_esr[3]_LC_28, uart_rx.r_data_esr[6]_LC_31, uart_rx.r_data_esr[7]_LC_32}
