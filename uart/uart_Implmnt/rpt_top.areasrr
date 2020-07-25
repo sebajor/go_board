@@ -9,26 +9,26 @@ Part:			ICE40HX1KVQ100 (Lattice)
 SEQUENTIAL ELEMENTS
 Name      Total elements     Utilization     Notes
 --------------------------------------------------
-FLOPS     43                 100 %                
+FLOPS     52                 100 %                
 ==================================================
-Total SEQUENTIAL ELEMENTS in the block top:	43 (29.86 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block top:	52 (32.50 % Utilization)
 
 
 COMBINATIONAL LOGIC
 Name       Total elements     Utilization     Notes
 ---------------------------------------------------
-LUTS       70                 100 %                
+LUTS       76                 100 %                
 CARRYS     8                  100 %                
 ===================================================
-Total COMBINATIONAL LOGIC in the block top:	78 (54.17 % Utilization)
+Total COMBINATIONAL LOGIC in the block top:	84 (52.50 % Utilization)
 
 
 IO PADS
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-PADS     17                 100 %                
+PADS     18                 100 %                
 =================================================
-Total IO PADS in the block top:	17 (11.81 % Utilization)
+Total IO PADS in the block top:	18 (11.25 % Utilization)
 
 ---------------------------------------------------------------
 ########   Utilization report for  cell:   seven_seg   ########
@@ -38,17 +38,17 @@ Instance path:   top.seven_seg
 SEQUENTIAL ELEMENTS
 Name      Total elements     Utilization     Notes
 --------------------------------------------------
-FLOPS     14                 32.6 %               
+FLOPS     14                 26.9 %               
 ==================================================
-Total SEQUENTIAL ELEMENTS in the block top.seven_seg:	14 (9.72 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block top.seven_seg:	14 (8.75 % Utilization)
 
 
 COMBINATIONAL LOGIC
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-LUTS     14                 20 %                 
+LUTS     14                 18.4 %               
 =================================================
-Total COMBINATIONAL LOGIC in the block top.seven_seg:	14 (9.72 % Utilization)
+Total COMBINATIONAL LOGIC in the block top.seven_seg:	14 (8.75 % Utilization)
 
 -------------------------------------------------------------
 ########   Utilization report for  cell:   uart_rx   ########
@@ -58,18 +58,18 @@ Instance path:   top.uart_rx
 SEQUENTIAL ELEMENTS
 Name      Total elements     Utilization     Notes
 --------------------------------------------------
-FLOPS     29                 67.4 %               
+FLOPS     38                 73.1 %               
 ==================================================
-Total SEQUENTIAL ELEMENTS in the block top.uart_rx:	29 (20.14 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block top.uart_rx:	38 (23.75 % Utilization)
 
 
 COMBINATIONAL LOGIC
 Name       Total elements     Utilization     Notes
 ---------------------------------------------------
-LUTS       56                 80 %                 
+LUTS       62                 81.6 %               
 CARRYS     8                  100 %                
 ===================================================
-Total COMBINATIONAL LOGIC in the block top.uart_rx:	64 (44.44 % Utilization)
+Total COMBINATIONAL LOGIC in the block top.uart_rx:	70 (43.75 % Utilization)
 
 
 ##### END OF AREA REPORT #####]

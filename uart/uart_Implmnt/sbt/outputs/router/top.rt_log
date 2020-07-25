@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 11 2017 17:03:42
 
-* File Generated:     Jul 21 2020 23:36:12
+* File Generated:     Jul 24 2020 00:49:07
 
 * Purpose:            Router runtime info
 
@@ -18,8 +18,8 @@ Executing : C:\lscc\iCEcube2.2017.08\sbt_backend\bin\win32\opt\sbrouter.exe C:\l
 I1203: Reading Design top
 I1202: Reading Architecture of device iCE40HX1K
 I1209: Started routing
-I1223: Total Nets : 85 
-I1212: Iteration  1 :    10 unrouted : 0 seconds
+I1223: Total Nets : 99 
+I1212: Iteration  1 :    14 unrouted : 0 seconds
 I1212: Iteration  2 :     0 unrouted : 0 seconds
 I1215: Routing is successful
 I1206: Completed routing

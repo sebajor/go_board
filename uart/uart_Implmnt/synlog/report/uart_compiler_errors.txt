@@ -1,2 +1,2 @@
-@E: CL172 :"C:\Users\seba\Documents\go_board\uart\uart_rx.v":16:11:16:20|Only one always block can assign a given variable next_state[2:0]
+@E: CG906 :"C:\Users\seba\Documents\go_board\uart\top.v":33:5:33:7|Reference to unknown variable rst.
 

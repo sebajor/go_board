@@ -3,8 +3,8 @@
 @N: MT206 |Auto Constrain mode is enabled
 @N: MO106 :"c:\users\seba\documents\go_board\uart\seven_seg.v":51:2:51:5|Found ROM .delname. (in view: work.seven_seg(verilog)) with 16 words by 7 bits.
 @N: MO106 :"c:\users\seba\documents\go_board\uart\seven_seg.v":29:2:29:5|Found ROM .delname. (in view: work.seven_seg(verilog)) with 16 words by 7 bits.
-@N: FX271 :"c:\users\seba\documents\go_board\uart\uart_rx.v":31:1:31:6|Replicating instance uart_rx.state[0] (in view: work.top(verilog)) with 14 loads 1 time to improve timing.
-@N: FX271 :"c:\users\seba\documents\go_board\uart\uart_rx.v":31:1:31:6|Replicating instance uart_rx.state_nss_0_i[0] (in view: work.top(verilog)) with 2 loads 1 time(s) to improve timing.
+@N: FX271 :"c:\users\seba\documents\go_board\uart\uart_rx.v":29:8:29:13|Replicating instance uart_rx.state[0] (in view: work.top(verilog)) with 17 loads 1 time to improve timing.
+@N: FX271 :"c:\users\seba\documents\go_board\uart\uart_rx.v":29:8:29:13|Replicating instance uart_rx.g0_0_0 (in view: work.top(verilog)) with 2 loads 1 time(s) to improve timing.
 @N: FX1016 :"c:\users\seba\documents\go_board\uart\top.v":3:7:3:11|SB_GB_IO inserted on the port i_Clk.
 @N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
 @N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 

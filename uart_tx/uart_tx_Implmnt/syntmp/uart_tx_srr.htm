@@ -1,0 +1,747 @@
+<html><body><samp><pre>
+<!@TC:1595712706>
+#Build: Synplify Pro L-2016.09L+ice40, Build 077R, Dec  2 2016
+#install: C:\lscc\iCEcube2.2017.08\synpbase
+#OS: Windows 8 6.2
+#Hostname: DESKTOP-N4TE8I3
+
+# Sat Jul 25 17:31:46 2020
+
+#Implementation: uart_tx_Implmnt
+
+<a name=compilerReport1></a>Synopsys HDL Compiler, version comp2016q3p1, Build 141R, built Dec  5 2016</a>
+@N: : <!@TM:1595712706> | Running in 64-bit mode 
+Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+
+<a name=compilerReport2></a>Synopsys Verilog Compiler, version comp2016q3p1, Build 141R, built Dec  5 2016</a>
+@N: : <!@TM:1595712706> | Running in 64-bit mode 
+Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+
+@I::"C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v" (library work)
+@I::"C:\lscc\iCEcube2.2017.08\synpbase\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"C:\lscc\iCEcube2.2017.08\synpbase\lib\vlog\umr_capim.v" (library snps_haps)
+@I::"C:\lscc\iCEcube2.2017.08\synpbase\lib\vlog\scemi_objects.v" (library snps_haps)
+@I::"C:\lscc\iCEcube2.2017.08\synpbase\lib\vlog\scemi_pipes.svh" (library snps_haps)
+@I::"C:\Users\seba\Documents\go_board\uart_tx\top.v" (library work)
+@I::"C:\Users\seba\Documents\go_board\uart_tx\uart_tx.v" (library work)
+Verilog syntax check successful!
+File C:\Users\seba\Documents\go_board\uart_tx\top.v changed - recompiling
+Selecting top level module top
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="C:\Users\seba\Documents\go_board\uart_tx\uart_tx.v:1:7:1:14:@N:CG364:@XP_MSG">uart_tx.v(1)</a><!@TM:1595712706> | Synthesizing module uart_tx in library work.
+
+<font color=#A52A2A>@W:<a href="@W:CL118:@XP_HELP">CL118</a> : <a href="C:\Users\seba\Documents\go_board\uart_tx\uart_tx.v:62:8:62:12:@W:CL118:@XP_MSG">uart_tx.v(62)</a><!@TM:1595712706> | Latch generated from always block for signal next_state[2:0]; possible missing assignment in an if or case statement.</font>
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="C:\Users\seba\Documents\go_board\uart_tx\top.v:1:7:1:10:@N:CG364:@XP_MSG">top.v(1)</a><!@TM:1595712706> | Synthesizing module top in library work.
+
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 70MB peak: 71MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sat Jul 25 17:31:46 2020
+
+###########################################################]
+<a name=compilerReport3></a>Synopsys Netlist Linker, version comp2016q3p1, Build 141R, built Dec  5 2016</a>
+@N: : <!@TM:1595712706> | Running in 64-bit mode 
+@N:<a href="@N:NF107:@XP_HELP">NF107</a> : <a href="C:\Users\seba\Documents\go_board\uart_tx\top.v:1:7:1:10:@N:NF107:@XP_MSG">top.v(1)</a><!@TM:1595712706> | Selected library: work cell: top view verilog as top level
+@N:<a href="@N:NF107:@XP_HELP">NF107</a> : <a href="C:\Users\seba\Documents\go_board\uart_tx\top.v:1:7:1:10:@N:NF107:@XP_MSG">top.v(1)</a><!@TM:1595712706> | Selected library: work cell: top view verilog as top level
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sat Jul 25 17:31:46 2020
+
+###########################################################]
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 3MB peak: 4MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sat Jul 25 17:31:46 2020
+
+###########################################################]
+<a name=compilerReport4></a>Synopsys Netlist Linker, version comp2016q3p1, Build 141R, built Dec  5 2016</a>
+@N: : <!@TM:1595712707> | Running in 64-bit mode 
+File C:\Users\seba\Documents\go_board\uart_tx\uart_tx_Implmnt\synwork\uart_tx_comp.srs changed - recompiling
+@N:<a href="@N:NF107:@XP_HELP">NF107</a> : <a href="C:\Users\seba\Documents\go_board\uart_tx\top.v:1:7:1:10:@N:NF107:@XP_MSG">top.v(1)</a><!@TM:1595712707> | Selected library: work cell: top view verilog as top level
+@N:<a href="@N:NF107:@XP_HELP">NF107</a> : <a href="C:\Users\seba\Documents\go_board\uart_tx\top.v:1:7:1:10:@N:NF107:@XP_MSG">top.v(1)</a><!@TM:1595712707> | Selected library: work cell: top view verilog as top level
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sat Jul 25 17:31:47 2020
+
+###########################################################]
+Pre-mapping Report
+
+# Sat Jul 25 17:31:48 2020
+
+<a name=mapperReport5></a>Synopsys Lattice Technology Pre-mapping, Version maplat, Build 1612R, Built Dec  5 2016 10:31:39</a>
+Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+Product Version L-2016.09L+ice40
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
+
+@A:<a href="@A:MF827:@XP_HELP">MF827</a> : <!@TM:1595712708> | No constraint file specified. 
+Linked File: <a href="C:\Users\seba\Documents\go_board\uart_tx\uart_tx_Implmnt\uart_tx_scck.rpt:@XP_FILE">uart_tx_scck.rpt</a>
+Printing clock  summary report in "C:\Users\seba\Documents\go_board\uart_tx\uart_tx_Implmnt\uart_tx_scck.rpt" file 
+@N:<a href="@N:MF248:@XP_HELP">MF248</a> : <!@TM:1595712708> | Running in 64-bit mode. 
+@N:<a href="@N:MF666:@XP_HELP">MF666</a> : <!@TM:1595712708> | Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.) 
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 102MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 102MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 102MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 103MB)
+
+ICG Latch Removal Summary:
+Number of ICG latches removed:	0
+Number of ICG latches not removed:	0
+syn_allowed_resources : blockrams=16  set on top level netlist top
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 133MB)
+
+
+
+<a name=mapperReport6></a>Clock Summary</a>
+*****************
+
+Start                              Requested     Requested     Clock                        Clock                     Clock
+Clock                              Frequency     Period        Type                         Group                     Load 
+---------------------------------------------------------------------------------------------------------------------------
+top|i_Clk                          4.1 MHz       245.248       inferred                     Autoconstr_clkgroup_0     22   
+uart_tx|state_derived_clock[2]     4.1 MHz       245.248       derived (from top|i_Clk)     Autoconstr_clkgroup_0     124  
+===========================================================================================================================
+
+<font color=#A52A2A>@W:<a href="@W:MT529:@XP_HELP">MT529</a> : <a href="c:\users\seba\documents\go_board\uart_tx\uart_tx.v:26:4:26:10:@W:MT529:@XP_MSG">uart_tx.v(26)</a><!@TM:1595712708> | Found inferred clock top|i_Clk which controls 22 sequential elements including uart_tx.r_data[6:5]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. </font>
+
+Finished Pre Mapping Phase.
+@N:<a href="@N:BN225:@XP_HELP">BN225</a> : <!@TM:1595712708> | Writing default property annotation file C:\Users\seba\Documents\go_board\uart_tx\uart_tx_Implmnt\uart_tx.sap. 
+
+Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 133MB)
+
+None
+None
+
+Finished constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 133MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 47MB peak: 133MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat Jul 25 17:31:48 2020
+
+###########################################################]
+Map & Optimize Report
+
+# Sat Jul 25 17:31:48 2020
+
+<a name=mapperReport7></a>Synopsys Lattice Technology Mapper, Version maplat, Build 1612R, Built Dec  5 2016 10:31:39</a>
+Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+Product Version L-2016.09L+ice40
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
+
+@N:<a href="@N:MF248:@XP_HELP">MF248</a> : <!@TM:1595712709> | Running in 64-bit mode. 
+@N:<a href="@N:MF666:@XP_HELP">MF666</a> : <!@TM:1595712709> | Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.) 
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 100MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 100MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 102MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 133MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+@N:<a href="@N:MT206:@XP_HELP">MT206</a> : <!@TM:1595712709> | Auto Constrain mode is enabled 
+<font color=#A52A2A>@W:<a href="@W:FX1039:@XP_HELP">FX1039</a> : <a href="c:\users\seba\documents\go_board\uart_tx\uart_tx.v:26:4:26:10:@W:FX1039:@XP_MSG">uart_tx.v(26)</a><!@TM:1595712709> | User-specified initial value defined for instance uart_tx.r_data[6:5] is being ignored. </font>
+<font color=#A52A2A>@W:<a href="@W:FX1039:@XP_HELP">FX1039</a> : <a href="c:\users\seba\documents\go_board\uart_tx\uart_tx.v:26:4:26:10:@W:FX1039:@XP_MSG">uart_tx.v(26)</a><!@TM:1595712709> | User-specified initial value defined for instance uart_tx.r_data[0] is being ignored. </font>
+<font color=#A52A2A>@W:<a href="@W:FX1039:@XP_HELP">FX1039</a> : <a href="c:\users\seba\documents\go_board\uart_tx\uart_tx.v:26:4:26:10:@W:FX1039:@XP_MSG">uart_tx.v(26)</a><!@TM:1595712709> | User-specified initial value defined for instance uart_tx.counter[9:0] is being ignored. </font>
+<font color=#A52A2A>@W:<a href="@W:FX1039:@XP_HELP">FX1039</a> : <a href="c:\users\seba\documents\go_board\uart_tx\uart_tx.v:26:4:26:10:@W:FX1039:@XP_MSG">uart_tx.v(26)</a><!@TM:1595712709> | User-specified initial value defined for instance uart_tx.index[3:0] is being ignored. </font>
+<font color=#A52A2A>@W:<a href="@W:FX1039:@XP_HELP">FX1039</a> : <a href="c:\users\seba\documents\go_board\uart_tx\uart_tx.v:26:4:26:10:@W:FX1039:@XP_MSG">uart_tx.v(26)</a><!@TM:1595712709> | User-specified initial value defined for instance uart_tx.tready is being ignored. </font>
+<font color=#A52A2A>@W:<a href="@W:FX1039:@XP_HELP">FX1039</a> : <a href="c:\users\seba\documents\go_board\uart_tx\uart_tx.v:26:4:26:10:@W:FX1039:@XP_MSG">uart_tx.v(26)</a><!@TM:1595712709> | User-specified initial value defined for instance uart_tx.state[2:0] is being ignored. </font>
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 133MB)
+
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="c:\users\seba\documents\go_board\uart_tx\uart_tx.v:26:4:26:10:@W:BN132:@XP_MSG">uart_tx.v(26)</a><!@TM:1595712709> | Removing instance uart_tx.r_data[6] because it is equivalent to instance uart_tx.r_data[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="c:\users\seba\documents\go_board\uart_tx\uart_tx.v:26:4:26:10:@W:BN132:@XP_MSG">uart_tx.v(26)</a><!@TM:1595712709> | Removing instance uart_tx.r_data[5] because it is equivalent to instance uart_tx.r_data[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.</font>
+<font color=#A52A2A>@W:<a href="@W:MO129:@XP_HELP">MO129</a> : <a href="c:\users\seba\documents\go_board\uart_tx\uart_tx.v:62:8:62:12:@W:MO129:@XP_MSG">uart_tx.v(62)</a><!@TM:1595712709> | Sequential instance uart_tx.next_state[2] is reduced to a combinational gate by constant propagation.</font>
+
+Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 133MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 133MB)
+
+
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 133MB)
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 133MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 133MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 133MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 133MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 133MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 133MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:00s		    -2.34ns		  31 /        19
+   2		0h:00m:00s		    -2.34ns		  31 /        19
+
+   3		0h:00m:00s		    -2.34ns		  34 /        19
+   4		0h:00m:00s		    -1.53ns		  35 /        19
+   5		0h:00m:00s		    -0.94ns		  37 /        19
+
+
+   6		0h:00m:00s		    -0.94ns		  37 /        19
+@N:<a href="@N:FX1016:@XP_HELP">FX1016</a> : <a href="c:\users\seba\documents\go_board\uart_tx\top.v:3:7:3:12:@N:FX1016:@XP_MSG">top.v(3)</a><!@TM:1595712709> | SB_GB_IO inserted on the port i_Clk.
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 133MB)
+
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 133MB)
+
+@N:<a href="@N:MT611:@XP_HELP">MT611</a> : <!@TM:1595712709> | Automatically generated clock uart_tx|state_derived_clock[2] is not used and is being removed 
+
+
+@S |Clock Optimization Summary
+
+
+<a name=clockReport8></a>#### START OF CLOCK OPTIMIZATION REPORT #####[</a>
+
+1 non-gated/non-generated clock tree(s) driving 19 clock pin(s) of sequential element(s)
+0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+0 instances converted, 0 sequential instances remain driven by gated/generated clocks
+
+============================ Non-Gated/Non-Generated Clocks ============================
+Clock Tree ID     Driving Element      Drive Element Type     Fanout     Sample Instance
+----------------------------------------------------------------------------------------
+<a href="@|S:i_Clk_ibuf_gb_io@|E:uart_tx.tready@|F:@syn_sample_clock_path==CKID0001@|M:ClockId0001  @XP_NAMES_BY_PROP">ClockId0001 </a>       i_Clk_ibuf_gb_io     SB_GB_IO               19         uart_tx.tready 
+========================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######]
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 107MB peak: 133MB)
+
+Writing Analyst data base C:\Users\seba\Documents\go_board\uart_tx\uart_tx_Implmnt\synwork\uart_tx_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 133MB)
+
+Writing EDIF Netlist and constraint files
+@N:<a href="@N:BW103:@XP_HELP">BW103</a> : <!@TM:1595712709> | The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns. 
+@N:<a href="@N:BW107:@XP_HELP">BW107</a> : <!@TM:1595712709> | Synopsys Constraint File capacitance units using default value of 1pF  
+@N:<a href="@N:FX1056:@XP_HELP">FX1056</a> : <!@TM:1595712709> | Writing EDF file: C:\Users\seba\Documents\go_board\uart_tx\uart_tx_Implmnt\uart_tx.edf 
+L-2016.09L+ice40
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
+
+<font color=#A52A2A>@W:<a href="@W:MT420:@XP_HELP">MT420</a> : <!@TM:1595712709> | Found inferred clock top|i_Clk with period 7.49ns. Please declare a user-defined clock on object "p:i_Clk"</font> 
+
+
+<a name=timingReport9></a>##### START OF TIMING REPORT #####[</a>
+# Timing Report written on Sat Jul 25 17:31:49 2020
+#
+
+
+Top view:               top
+Requested Frequency:    133.5 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N:<a href="@N:MT320:@XP_HELP">MT320</a> : <!@TM:1595712709> | This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report. 
+
+@N:<a href="@N:MT322:@XP_HELP">MT322</a> : <!@TM:1595712709> | Clock constraints include only register-to-register paths associated with each individual clock. 
+
+
+
+<a name=performanceSummary10></a>Performance Summary</a>
+*******************
+
+
+Worst slack in design: -1.322
+
+                   Requested     Estimated     Requested     Estimated                Clock        Clock                
+Starting Clock     Frequency     Frequency     Period        Period        Slack      Type         Group                
+------------------------------------------------------------------------------------------------------------------------
+top|i_Clk          133.5 MHz     113.5 MHz     7.489         8.811         -1.322     inferred     Autoconstr_clkgroup_0
+========================================================================================================================
+
+
+
+
+
+<a name=clockRelationships11></a>Clock Relationships</a>
+*******************
+
+Clocks                |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+-------------------------------------------------------------------------------------------------------------
+Starting   Ending     |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
+-------------------------------------------------------------------------------------------------------------
+top|i_Clk  top|i_Clk  |  7.489       -1.322  |  No paths    -      |  No paths    -      |  No paths    -    
+=============================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+<a name=interfaceInfo12></a>Interface Information </a>
+*********************
+
+No IO constraint found
+
+
+
+====================================
+<a name=clockReport13></a>Detailed Report for Clock: top|i_Clk</a>
+====================================
+
+
+
+<a name=startingSlack14></a>Starting Points with Worst Slack</a>
+********************************
+
+                       Starting                                          Arrival           
+Instance               Reference     Type         Pin     Net            Time        Slack 
+                       Clock                                                               
+-------------------------------------------------------------------------------------------
+uart_tx.counter[0]     top|i_Clk     SB_DFFSR     Q       counter[0]     0.540       -1.322
+uart_tx.counter[1]     top|i_Clk     SB_DFFSR     Q       counter[1]     0.540       -1.315
+uart_tx.counter[3]     top|i_Clk     SB_DFFSR     Q       counter[3]     0.540       -1.315
+uart_tx.state[0]       top|i_Clk     SB_DFF       Q       state[0]       0.540       -1.315
+uart_tx.counter[5]     top|i_Clk     SB_DFFSR     Q       counter[5]     0.540       -1.287
+uart_tx.counter[2]     top|i_Clk     SB_DFFSR     Q       counter[2]     0.540       -1.266
+uart_tx.state[1]       top|i_Clk     SB_DFF       Q       state[1]       0.540       -1.266
+uart_tx.counter[4]     top|i_Clk     SB_DFFSR     Q       counter[4]     0.540       -1.252
+uart_tx.counter[7]     top|i_Clk     SB_DFFSR     Q       counter[7]     0.540       -1.245
+uart_tx.counter[9]     top|i_Clk     SB_DFFSR     Q       counter[9]     0.540       -1.224
+===========================================================================================
+
+
+<a name=endingSlack15></a>Ending Points with Worst Slack</a>
+******************************
+
+                       Starting                                                 Required           
+Instance               Reference     Type         Pin     Net                   Time         Slack 
+                       Clock                                                                       
+---------------------------------------------------------------------------------------------------
+uart_tx.counter[9]     top|i_Clk     SB_DFFSR     D       counter_RNO[9]        7.384        -1.322
+uart_tx.counter[8]     top|i_Clk     SB_DFFSR     D       counter_RNO[8]        7.384        -1.182
+uart_tx.counter[7]     top|i_Clk     SB_DFFSR     D       counter_RNO[7]        7.384        -1.041
+uart_tx.counter[6]     top|i_Clk     SB_DFFSR     D       counter_RNO[6]        7.384        -0.901
+uart_tx.counter[5]     top|i_Clk     SB_DFFSR     D       counter_RNO[5]        7.384        -0.761
+uart_tx.counter[4]     top|i_Clk     SB_DFFSR     D       counter_RNO[4]        7.384        -0.621
+uart_tx.counter[3]     top|i_Clk     SB_DFFSR     D       counter_RNO[3]        7.384        -0.480
+uart_tx.counter[2]     top|i_Clk     SB_DFFSR     D       counter_RNO[2]        7.384        -0.340
+uart_tx.counter[0]     top|i_Clk     SB_DFFSR     R       state_RNICAH01[0]     7.384        -0.301
+uart_tx.counter[1]     top|i_Clk     SB_DFFSR     R       state_RNICAH01[0]     7.384        -0.301
+===================================================================================================
+
+
+
+<a name=worstPaths16></a>Worst Path Information</a>
+<a href="C:\Users\seba\Documents\go_board\uart_tx\uart_tx_Implmnt\uart_tx.srr:srsfC:\Users\seba\Documents\go_board\uart_tx\uart_tx_Implmnt\uart_tx.srs:fp:22237:26059:@XP_NAMES_GATE">View Worst Path in Analyst</a>
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      7.489
+    - Setup time:                            0.105
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         7.384
+
+    - Propagation time:                      8.706
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.322
+
+    Number of logic level(s):                12
+    Starting point:                          uart_tx.counter[0] / Q
+    Ending point:                            uart_tx.counter[9] / D
+    The start point is clocked by            top|i_Clk [rising] on pin C
+    The end   point is clocked by            top|i_Clk [rising] on pin C
+
+Instance / Net                                 Pin      Pin               Arrival     No. of    
+Name                              Type         Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------
+uart_tx.counter[0]                SB_DFFSR     Q        Out     0.540     0.540       -         
+counter[0]                        Net          -        -       1.599     -           4         
+uart_tx.counter_RNI5L34_0[9]      SB_LUT4      I0       In      -         2.139       -         
+uart_tx.counter_RNI5L34_0[9]      SB_LUT4      O        Out     0.449     2.588       -         
+counter12_6_0                     Net          -        -       1.371     -           1         
+uart_tx.counter_RNI9DPM1[1]       SB_LUT4      I0       In      -         3.959       -         
+uart_tx.counter_RNI9DPM1[1]       SB_LUT4      O        Out     0.386     4.345       -         
+un1_tready8_0_i                   Net          -        -       0.905     -           2         
+uart_tx.un1_counter_5_cry_0_c     SB_CARRY     CI       In      -         5.250       -         
+uart_tx.un1_counter_5_cry_0_c     SB_CARRY     CO       Out     0.126     5.376       -         
+un1_counter_5_cry_0               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_1_c     SB_CARRY     CI       In      -         5.390       -         
+uart_tx.un1_counter_5_cry_1_c     SB_CARRY     CO       Out     0.126     5.516       -         
+un1_counter_5_cry_1               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_2_c     SB_CARRY     CI       In      -         5.530       -         
+uart_tx.un1_counter_5_cry_2_c     SB_CARRY     CO       Out     0.126     5.656       -         
+un1_counter_5_cry_2               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_3_c     SB_CARRY     CI       In      -         5.670       -         
+uart_tx.un1_counter_5_cry_3_c     SB_CARRY     CO       Out     0.126     5.796       -         
+un1_counter_5_cry_3               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_4_c     SB_CARRY     CI       In      -         5.810       -         
+uart_tx.un1_counter_5_cry_4_c     SB_CARRY     CO       Out     0.126     5.936       -         
+un1_counter_5_cry_4               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_5_c     SB_CARRY     CI       In      -         5.950       -         
+uart_tx.un1_counter_5_cry_5_c     SB_CARRY     CO       Out     0.126     6.077       -         
+un1_counter_5_cry_5               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_6_c     SB_CARRY     CI       In      -         6.091       -         
+uart_tx.un1_counter_5_cry_6_c     SB_CARRY     CO       Out     0.126     6.217       -         
+un1_counter_5_cry_6               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_7_c     SB_CARRY     CI       In      -         6.231       -         
+uart_tx.un1_counter_5_cry_7_c     SB_CARRY     CO       Out     0.126     6.357       -         
+un1_counter_5_cry_7               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_8_c     SB_CARRY     CI       In      -         6.371       -         
+uart_tx.un1_counter_5_cry_8_c     SB_CARRY     CO       Out     0.126     6.497       -         
+un1_counter_5_cry_8               Net          -        -       0.386     -           1         
+uart_tx.counter_RNO[9]            SB_LUT4      I3       In      -         6.883       -         
+uart_tx.counter_RNO[9]            SB_LUT4      O        Out     0.316     7.199       -         
+counter_RNO[9]                    Net          -        -       1.507     -           1         
+uart_tx.counter[9]                SB_DFFSR     D        In      -         8.706       -         
+================================================================================================
+Total path delay (propagation time + setup) of 8.811 is 2.931(33.3%) logic and 5.880(66.7%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 2: 
+      Requested Period:                      7.489
+    - Setup time:                            0.105
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         7.384
+
+    - Propagation time:                      8.699
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -1.315
+
+    Number of logic level(s):                12
+    Starting point:                          uart_tx.counter[1] / Q
+    Ending point:                            uart_tx.counter[9] / D
+    The start point is clocked by            top|i_Clk [rising] on pin C
+    The end   point is clocked by            top|i_Clk [rising] on pin C
+
+Instance / Net                                 Pin      Pin               Arrival     No. of    
+Name                              Type         Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------
+uart_tx.counter[1]                SB_DFFSR     Q        Out     0.540     0.540       -         
+counter[1]                        Net          -        -       1.599     -           5         
+uart_tx.counter_RNI6M34[1]        SB_LUT4      I0       In      -         2.139       -         
+uart_tx.counter_RNI6M34[1]        SB_LUT4      O        Out     0.449     2.588       -         
+g0_0_3                            Net          -        -       1.371     -           1         
+uart_tx.counter_RNI9DPM1[1]       SB_LUT4      I1       In      -         3.959       -         
+uart_tx.counter_RNI9DPM1[1]       SB_LUT4      O        Out     0.379     4.338       -         
+un1_tready8_0_i                   Net          -        -       0.905     -           2         
+uart_tx.un1_counter_5_cry_0_c     SB_CARRY     CI       In      -         5.242       -         
+uart_tx.un1_counter_5_cry_0_c     SB_CARRY     CO       Out     0.126     5.369       -         
+un1_counter_5_cry_0               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_1_c     SB_CARRY     CI       In      -         5.383       -         
+uart_tx.un1_counter_5_cry_1_c     SB_CARRY     CO       Out     0.126     5.509       -         
+un1_counter_5_cry_1               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_2_c     SB_CARRY     CI       In      -         5.523       -         
+uart_tx.un1_counter_5_cry_2_c     SB_CARRY     CO       Out     0.126     5.649       -         
+un1_counter_5_cry_2               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_3_c     SB_CARRY     CI       In      -         5.663       -         
+uart_tx.un1_counter_5_cry_3_c     SB_CARRY     CO       Out     0.126     5.789       -         
+un1_counter_5_cry_3               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_4_c     SB_CARRY     CI       In      -         5.803       -         
+uart_tx.un1_counter_5_cry_4_c     SB_CARRY     CO       Out     0.126     5.930       -         
+un1_counter_5_cry_4               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_5_c     SB_CARRY     CI       In      -         5.944       -         
+uart_tx.un1_counter_5_cry_5_c     SB_CARRY     CO       Out     0.126     6.070       -         
+un1_counter_5_cry_5               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_6_c     SB_CARRY     CI       In      -         6.084       -         
+uart_tx.un1_counter_5_cry_6_c     SB_CARRY     CO       Out     0.126     6.210       -         
+un1_counter_5_cry_6               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_7_c     SB_CARRY     CI       In      -         6.224       -         
+uart_tx.un1_counter_5_cry_7_c     SB_CARRY     CO       Out     0.126     6.350       -         
+un1_counter_5_cry_7               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_8_c     SB_CARRY     CI       In      -         6.364       -         
+uart_tx.un1_counter_5_cry_8_c     SB_CARRY     CO       Out     0.126     6.490       -         
+un1_counter_5_cry_8               Net          -        -       0.386     -           1         
+uart_tx.counter_RNO[9]            SB_LUT4      I3       In      -         6.876       -         
+uart_tx.counter_RNO[9]            SB_LUT4      O        Out     0.316     7.192       -         
+counter_RNO[9]                    Net          -        -       1.507     -           1         
+uart_tx.counter[9]                SB_DFFSR     D        In      -         8.699       -         
+================================================================================================
+Total path delay (propagation time + setup) of 8.804 is 2.924(33.2%) logic and 5.880(66.8%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 3: 
+      Requested Period:                      7.489
+    - Setup time:                            0.105
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         7.384
+
+    - Propagation time:                      8.699
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -1.315
+
+    Number of logic level(s):                12
+    Starting point:                          uart_tx.counter[3] / Q
+    Ending point:                            uart_tx.counter[9] / D
+    The start point is clocked by            top|i_Clk [rising] on pin C
+    The end   point is clocked by            top|i_Clk [rising] on pin C
+
+Instance / Net                                 Pin      Pin               Arrival     No. of    
+Name                              Type         Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------
+uart_tx.counter[3]                SB_DFFSR     Q        Out     0.540     0.540       -         
+counter[3]                        Net          -        -       1.599     -           4         
+uart_tx.counter_RNI5L34_0[9]      SB_LUT4      I1       In      -         2.139       -         
+uart_tx.counter_RNI5L34_0[9]      SB_LUT4      O        Out     0.379     2.518       -         
+counter12_6_0                     Net          -        -       1.371     -           1         
+uart_tx.counter_RNI9DPM1[1]       SB_LUT4      I0       In      -         3.889       -         
+uart_tx.counter_RNI9DPM1[1]       SB_LUT4      O        Out     0.449     4.338       -         
+un1_tready8_0_i                   Net          -        -       0.905     -           2         
+uart_tx.un1_counter_5_cry_0_c     SB_CARRY     CI       In      -         5.242       -         
+uart_tx.un1_counter_5_cry_0_c     SB_CARRY     CO       Out     0.126     5.369       -         
+un1_counter_5_cry_0               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_1_c     SB_CARRY     CI       In      -         5.383       -         
+uart_tx.un1_counter_5_cry_1_c     SB_CARRY     CO       Out     0.126     5.509       -         
+un1_counter_5_cry_1               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_2_c     SB_CARRY     CI       In      -         5.523       -         
+uart_tx.un1_counter_5_cry_2_c     SB_CARRY     CO       Out     0.126     5.649       -         
+un1_counter_5_cry_2               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_3_c     SB_CARRY     CI       In      -         5.663       -         
+uart_tx.un1_counter_5_cry_3_c     SB_CARRY     CO       Out     0.126     5.789       -         
+un1_counter_5_cry_3               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_4_c     SB_CARRY     CI       In      -         5.803       -         
+uart_tx.un1_counter_5_cry_4_c     SB_CARRY     CO       Out     0.126     5.930       -         
+un1_counter_5_cry_4               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_5_c     SB_CARRY     CI       In      -         5.944       -         
+uart_tx.un1_counter_5_cry_5_c     SB_CARRY     CO       Out     0.126     6.070       -         
+un1_counter_5_cry_5               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_6_c     SB_CARRY     CI       In      -         6.084       -         
+uart_tx.un1_counter_5_cry_6_c     SB_CARRY     CO       Out     0.126     6.210       -         
+un1_counter_5_cry_6               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_7_c     SB_CARRY     CI       In      -         6.224       -         
+uart_tx.un1_counter_5_cry_7_c     SB_CARRY     CO       Out     0.126     6.350       -         
+un1_counter_5_cry_7               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_8_c     SB_CARRY     CI       In      -         6.364       -         
+uart_tx.un1_counter_5_cry_8_c     SB_CARRY     CO       Out     0.126     6.490       -         
+un1_counter_5_cry_8               Net          -        -       0.386     -           1         
+uart_tx.counter_RNO[9]            SB_LUT4      I3       In      -         6.876       -         
+uart_tx.counter_RNO[9]            SB_LUT4      O        Out     0.316     7.192       -         
+counter_RNO[9]                    Net          -        -       1.507     -           1         
+uart_tx.counter[9]                SB_DFFSR     D        In      -         8.699       -         
+================================================================================================
+Total path delay (propagation time + setup) of 8.804 is 2.924(33.2%) logic and 5.880(66.8%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 4: 
+      Requested Period:                      7.489
+    - Setup time:                            0.105
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         7.384
+
+    - Propagation time:                      8.699
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -1.315
+
+    Number of logic level(s):                12
+    Starting point:                          uart_tx.state[0] / Q
+    Ending point:                            uart_tx.counter[9] / D
+    The start point is clocked by            top|i_Clk [rising] on pin C
+    The end   point is clocked by            top|i_Clk [rising] on pin C
+
+Instance / Net                                 Pin      Pin               Arrival     No. of    
+Name                              Type         Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------
+uart_tx.state[0]                  SB_DFF       Q        Out     0.540     0.540       -         
+state[0]                          Net          -        -       1.599     -           8         
+uart_tx.state_RNIT28M[0]          SB_LUT4      I0       In      -         2.139       -         
+uart_tx.state_RNIT28M[0]          SB_LUT4      O        Out     0.449     2.588       -         
+g0_rn_0                           Net          -        -       1.371     -           1         
+uart_tx.counter_RNI9DPM1[1]       SB_LUT4      I2       In      -         3.959       -         
+uart_tx.counter_RNI9DPM1[1]       SB_LUT4      O        Out     0.379     4.338       -         
+un1_tready8_0_i                   Net          -        -       0.905     -           2         
+uart_tx.un1_counter_5_cry_0_c     SB_CARRY     CI       In      -         5.242       -         
+uart_tx.un1_counter_5_cry_0_c     SB_CARRY     CO       Out     0.126     5.369       -         
+un1_counter_5_cry_0               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_1_c     SB_CARRY     CI       In      -         5.383       -         
+uart_tx.un1_counter_5_cry_1_c     SB_CARRY     CO       Out     0.126     5.509       -         
+un1_counter_5_cry_1               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_2_c     SB_CARRY     CI       In      -         5.523       -         
+uart_tx.un1_counter_5_cry_2_c     SB_CARRY     CO       Out     0.126     5.649       -         
+un1_counter_5_cry_2               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_3_c     SB_CARRY     CI       In      -         5.663       -         
+uart_tx.un1_counter_5_cry_3_c     SB_CARRY     CO       Out     0.126     5.789       -         
+un1_counter_5_cry_3               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_4_c     SB_CARRY     CI       In      -         5.803       -         
+uart_tx.un1_counter_5_cry_4_c     SB_CARRY     CO       Out     0.126     5.930       -         
+un1_counter_5_cry_4               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_5_c     SB_CARRY     CI       In      -         5.944       -         
+uart_tx.un1_counter_5_cry_5_c     SB_CARRY     CO       Out     0.126     6.070       -         
+un1_counter_5_cry_5               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_6_c     SB_CARRY     CI       In      -         6.084       -         
+uart_tx.un1_counter_5_cry_6_c     SB_CARRY     CO       Out     0.126     6.210       -         
+un1_counter_5_cry_6               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_7_c     SB_CARRY     CI       In      -         6.224       -         
+uart_tx.un1_counter_5_cry_7_c     SB_CARRY     CO       Out     0.126     6.350       -         
+un1_counter_5_cry_7               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_8_c     SB_CARRY     CI       In      -         6.364       -         
+uart_tx.un1_counter_5_cry_8_c     SB_CARRY     CO       Out     0.126     6.490       -         
+un1_counter_5_cry_8               Net          -        -       0.386     -           1         
+uart_tx.counter_RNO[9]            SB_LUT4      I3       In      -         6.876       -         
+uart_tx.counter_RNO[9]            SB_LUT4      O        Out     0.316     7.192       -         
+counter_RNO[9]                    Net          -        -       1.507     -           1         
+uart_tx.counter[9]                SB_DFFSR     D        In      -         8.699       -         
+================================================================================================
+Total path delay (propagation time + setup) of 8.804 is 2.924(33.2%) logic and 5.880(66.8%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 5: 
+      Requested Period:                      7.489
+    - Setup time:                            0.105
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         7.384
+
+    - Propagation time:                      8.671
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -1.287
+
+    Number of logic level(s):                12
+    Starting point:                          uart_tx.counter[5] / Q
+    Ending point:                            uart_tx.counter[9] / D
+    The start point is clocked by            top|i_Clk [rising] on pin C
+    The end   point is clocked by            top|i_Clk [rising] on pin C
+
+Instance / Net                                 Pin      Pin               Arrival     No. of    
+Name                              Type         Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------
+uart_tx.counter[5]                SB_DFFSR     Q        Out     0.540     0.540       -         
+counter[5]                        Net          -        -       1.599     -           4         
+uart_tx.counter_RNI5L34_0[9]      SB_LUT4      I2       In      -         2.139       -         
+uart_tx.counter_RNI5L34_0[9]      SB_LUT4      O        Out     0.351     2.490       -         
+counter12_6_0                     Net          -        -       1.371     -           1         
+uart_tx.counter_RNI9DPM1[1]       SB_LUT4      I0       In      -         3.861       -         
+uart_tx.counter_RNI9DPM1[1]       SB_LUT4      O        Out     0.449     4.309       -         
+un1_tready8_0_i                   Net          -        -       0.905     -           2         
+uart_tx.un1_counter_5_cry_0_c     SB_CARRY     CI       In      -         5.214       -         
+uart_tx.un1_counter_5_cry_0_c     SB_CARRY     CO       Out     0.126     5.341       -         
+un1_counter_5_cry_0               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_1_c     SB_CARRY     CI       In      -         5.355       -         
+uart_tx.un1_counter_5_cry_1_c     SB_CARRY     CO       Out     0.126     5.481       -         
+un1_counter_5_cry_1               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_2_c     SB_CARRY     CI       In      -         5.495       -         
+uart_tx.un1_counter_5_cry_2_c     SB_CARRY     CO       Out     0.126     5.621       -         
+un1_counter_5_cry_2               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_3_c     SB_CARRY     CI       In      -         5.635       -         
+uart_tx.un1_counter_5_cry_3_c     SB_CARRY     CO       Out     0.126     5.761       -         
+un1_counter_5_cry_3               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_4_c     SB_CARRY     CI       In      -         5.775       -         
+uart_tx.un1_counter_5_cry_4_c     SB_CARRY     CO       Out     0.126     5.901       -         
+un1_counter_5_cry_4               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_5_c     SB_CARRY     CI       In      -         5.915       -         
+uart_tx.un1_counter_5_cry_5_c     SB_CARRY     CO       Out     0.126     6.042       -         
+un1_counter_5_cry_5               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_6_c     SB_CARRY     CI       In      -         6.056       -         
+uart_tx.un1_counter_5_cry_6_c     SB_CARRY     CO       Out     0.126     6.182       -         
+un1_counter_5_cry_6               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_7_c     SB_CARRY     CI       In      -         6.196       -         
+uart_tx.un1_counter_5_cry_7_c     SB_CARRY     CO       Out     0.126     6.322       -         
+un1_counter_5_cry_7               Net          -        -       0.014     -           2         
+uart_tx.un1_counter_5_cry_8_c     SB_CARRY     CI       In      -         6.336       -         
+uart_tx.un1_counter_5_cry_8_c     SB_CARRY     CO       Out     0.126     6.462       -         
+un1_counter_5_cry_8               Net          -        -       0.386     -           1         
+uart_tx.counter_RNO[9]            SB_LUT4      I3       In      -         6.848       -         
+uart_tx.counter_RNO[9]            SB_LUT4      O        Out     0.316     7.164       -         
+counter_RNO[9]                    Net          -        -       1.507     -           1         
+uart_tx.counter[9]                SB_DFFSR     D        In      -         8.671       -         
+================================================================================================
+Total path delay (propagation time + setup) of 8.776 is 2.896(33.0%) logic and 5.880(67.0%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+None
+
+Finished final timing analysis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 134MB)
+
+---------------------------------------
+<a name=resourceUsage17></a>Resource Usage Report for top </a>
+
+Mapping to part: ice40hx1kvq100
+Cell usage:
+GND             1 use
+SB_CARRY        9 uses
+SB_DFF          5 uses
+SB_DFFSR        14 uses
+VCC             1 use
+SB_LUT4         37 uses
+
+I/O ports: 4
+I/O primitives: 4
+SB_GB_IO       1 use
+SB_IO          3 uses
+
+I/O Register bits:                  0
+Register bits not including I/Os:   19 (1%)
+Total load per clock:
+   top|i_Clk: 1
+
+@S |Mapping Summary:
+Total  LUTs: 37 (2%)
+
+Distribution of All Consumed LUTs = LUT4 
+Distribution of All Consumed Luts 37 = 37 
+
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 28MB peak: 134MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat Jul 25 17:31:49 2020
+
+###########################################################]
+
+</pre></samp></body></html>

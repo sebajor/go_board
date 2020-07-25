@@ -1,0 +1,12 @@
+@W: MT462 :"c:\users\seba\documents\go_board\uart_complete\uart_rx.v":72:0:72:5|Net uart_rx.r_valid appears to be an unidentified clock source. Assuming default frequency. If this is a required clock, declare a clock constraint on this net in your constraint file.
+@W: FA239 :"c:\users\seba\documents\go_board\uart_complete\seven_seg.v":51:2:51:5|ROM r_disp2_2[6:0] (in view: work.seven_seg(verilog)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
+@W: FA239 :"c:\users\seba\documents\go_board\uart_complete\seven_seg.v":29:2:29:5|ROM r_disp1_2[6:0] (in view: work.seven_seg(verilog)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
+@W: FA239 :"c:\users\seba\documents\go_board\uart_complete\seven_seg.v":51:2:51:5|ROM r_disp2_2[6:0] (in view: work.seven_seg(verilog)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
+@W: FA239 :"c:\users\seba\documents\go_board\uart_complete\seven_seg.v":29:2:29:5|ROM r_disp1_2[6:0] (in view: work.seven_seg(verilog)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
+@W: FX1039 :"c:\users\seba\documents\go_board\uart_complete\uart_tx.v":26:4:26:9|User-specified initial value defined for instance uart_tx.counter[9:0] is being ignored. 
+@W: FX1039 :"c:\users\seba\documents\go_board\uart_complete\uart_tx.v":26:4:26:9|User-specified initial value defined for instance uart_tx.index[3:0] is being ignored. 
+@W: FX1039 :"c:\users\seba\documents\go_board\uart_complete\uart_tx.v":26:4:26:9|User-specified initial value defined for instance uart_tx.r_data[8:0] is being ignored. 
+@W: FX1039 :"c:\users\seba\documents\go_board\uart_complete\uart_tx.v":26:4:26:9|User-specified initial value defined for instance uart_tx.tready is being ignored. 
+@W: FX1039 :"c:\users\seba\documents\go_board\uart_complete\uart_tx.v":26:4:26:9|User-specified initial value defined for instance uart_tx.state[2:0] is being ignored. 
+@W: MO129 :"c:\users\seba\documents\go_board\uart_complete\uart_tx.v":62:8:62:11|Sequential instance uart_tx.next_state[2] is reduced to a combinational gate by constant propagation.
+@W: MT420 |Found inferred clock top|i_Clk with period 8.17ns. Please declare a user-defined clock on object "p:i_Clk"

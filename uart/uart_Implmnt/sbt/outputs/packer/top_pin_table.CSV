@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 11 2017 16:52:36
 
-* File Generated:     Jul 21 2020 23:36:12
+* File Generated:     Jul 24 2020 00:49:07
 
 * Purpose:            Detailed IO and package pin info
 
@@ -19,31 +19,31 @@ Package, VQ100
 
 Pin Number, Pin Type Name, Signal Name, Direction, Global Buffer, IO Standard, Pull Up, IO Function, IO Bank, 
 ---------------, ---------------, ---------------, ---------------, ---------------, ---------------, ---------------, ---------------, ---------------, 
-1, PIO, not used, , , , , , leftBank
-2, PIO, o_Segment1_A, Output, , SB_LVCMOS, No Pull Up, Simple Output, leftBank
-3, PIO, o_Segment1_B, Output, , SB_LVCMOS, No Pull Up, Simple Output, leftBank
-4, PIO, o_Segment1_C, Output, , SB_LVCMOS, No Pull Up, Simple Output, leftBank
+1, PIO, o_Segment1_F, Output, , SB_LVCMOS, No Pull Up, Simple Output, leftBank
+2, PIO, o_Segment1_G, Output, , SB_LVCMOS, No Pull Up, Simple Output, leftBank
+3, PIO, o_Segment1_A, Output, , SB_LVCMOS, No Pull Up, Simple Output, leftBank
+4, PIO, o_Segment1_B, Output, , SB_LVCMOS, No Pull Up, Simple Output, leftBank
 5, GND, not used, , , , , , UnknownBank
 6, VCCIO_3, not used, , , , , , leftBank
-7, PIO, o_Segment1_D, Output, , SB_LVCMOS, No Pull Up, Simple Output, leftBank
-8, PIO, o_Segment1_E, Output, , SB_LVCMOS, No Pull Up, Simple Output, leftBank
-9, PIO, o_Segment1_F, Output, , SB_LVCMOS, No Pull Up, Simple Output, leftBank
-10, PIO, o_Segment1_G, Output, , SB_LVCMOS, No Pull Up, Simple Output, leftBank
+7, PIO, not used, , , , , , leftBank
+8, PIO, o_Segment2_F, Output, , SB_LVCMOS, No Pull Up, Simple Output, leftBank
+9, PIO, not used, , , , , , leftBank
+10, PIO, not used, , , , , , leftBank
 11, VCC, not used, , , , , , UnknownBank
-12, PIO, o_Segment2_F, Output, , SB_LVCMOS, No Pull Up, Simple Output, leftBank
-13, PIO_GBIN, i_Clk, Input, glb Buff, SB_LVCMOS, No Pull Up, Simple Input, leftBank
+12, PIO, not used, , , , , , leftBank
+13, PIO_GBIN, not used, , , , , , leftBank
 14, VCCIO_3, not used, , , , , , leftBank
-15, PIO_GBIN, o_Segment2_A, Output, , SB_LVCMOS, No Pull Up, Simple Output, leftBank
-16, PIO, o_Segment2_B, Output, , SB_LVCMOS, No Pull Up, Simple Output, leftBank
+15, PIO_GBIN, i_Clk, Input, glb Buff, SB_LVCMOS, No Pull Up, Simple Input, leftBank
+16, PIO, not used, , , , , , leftBank
 17, GND, not used, , , , , , UnknownBank
-18, PIO, o_Segment2_C, Output, , SB_LVCMOS, No Pull Up, Simple Output, leftBank
-19, PIO, o_Segment2_D, Output, , SB_LVCMOS, No Pull Up, Simple Output, leftBank
-20, PIO, o_Segment2_E, Output, , SB_LVCMOS, No Pull Up, Simple Output, leftBank
-21, PIO, o_Segment2_G, Output, , SB_LVCMOS, No Pull Up, Simple Output, leftBank
+18, PIO, not used, , , , , , leftBank
+19, PIO, not used, , , , , , leftBank
+20, PIO, not used, , , , , , leftBank
+21, PIO, not used, , , , , , leftBank
 22, VCCIO_3, not used, , , , , , leftBank
 23, GND, not used, , , , , , UnknownBank
-24, PIO, i_Switch_1, Input, , SB_LVCMOS, No Pull Up, Simple Input, leftBank
-25, PIO, i_UART_RX, Input, , SB_LVCMOS, No Pull Up, Simple Input, leftBank
+24, PIO, not used, , , , , , leftBank
+25, PIO, not used, , , , , , leftBank
 26, PIO, not used, , , , , , bottomBank
 27, PIO, not used, , , , , , bottomBank
 28, PIO, not used, , , , , , bottomBank
@@ -71,10 +71,10 @@ Pin Number, Pin Type Name, Signal Name, Direction, Global Buffer, IO Standard, P
 50, VDDIO_SPI, not used, , , , , , bottomBank
 51, PIO, not used, , , , , , rightBank
 52, PIO, not used, , , , , , rightBank
-53, PIO, not used, , , , , , rightBank
+53, PIO, i_Switch_1, Input, , SB_LVCMOS, No Pull Up, Simple Input, rightBank
 54, PIO, not used, , , , , , rightBank
 55, GND, not used, , , , , , UnknownBank
-56, PIO, not used, , , , , , rightBank
+56, PIO, o_LED_1, Output, , SB_LVCMOS, No Pull Up, Simple Output, rightBank
 57, PIO, not used, , , , , , rightBank
 58, VCCIO_1, not used, , , , , , rightBank
 59, PIO, not used, , , , , , rightBank
@@ -91,7 +91,7 @@ Pin Number, Pin Type Name, Signal Name, Direction, Global Buffer, IO Standard, P
 70, GND, not used, , , , , , UnknownBank
 71, PIO, not used, , , , , , rightBank
 72, PIO, not used, , , , , , rightBank
-73, PIO, not used, , , , , , rightBank
+73, PIO, i_UART_RX, Input, , SB_LVCMOS, No Pull Up, Simple Input, rightBank
 74, PIO, not used, , , , , , rightBank
 75, VPP_PUMP, not used, , , , , , UnknownBank
 76, VPP_DIRECT, not used, , , , , , UnknownBank
@@ -108,15 +108,15 @@ Pin Number, Pin Type Name, Signal Name, Direction, Global Buffer, IO Standard, P
 87, PIO, not used, , , , , , topBank
 88, VCCIO_0, not used, , , , , , topBank
 89, PIO_GBIN, not used, , , , , , topBank
-90, PIO_GBIN, not used, , , , , , topBank
-91, PIO, not used, , , , , , topBank
+90, PIO_GBIN, o_Segment1_E, Output, , SB_LVCMOS, No Pull Up, Simple Output, topBank
+91, PIO, o_Segment1_D, Output, , SB_LVCMOS, No Pull Up, Simple Output, topBank
 92, VCCIO_0, not used, , , , , , topBank
-93, PIO, not used, , , , , , topBank
-94, PIO, not used, , , , , , topBank
-95, PIO, not used, , , , , , topBank
-96, PIO, not used, , , , , , topBank
-97, PIO, not used, , , , , , topBank
+93, PIO, o_Segment1_C, Output, , SB_LVCMOS, No Pull Up, Simple Output, topBank
+94, PIO, o_Segment2_E, Output, , SB_LVCMOS, No Pull Up, Simple Output, topBank
+95, PIO, o_Segment2_D, Output, , SB_LVCMOS, No Pull Up, Simple Output, topBank
+96, PIO, o_Segment2_G, Output, , SB_LVCMOS, No Pull Up, Simple Output, topBank
+97, PIO, o_Segment2_C, Output, , SB_LVCMOS, No Pull Up, Simple Output, topBank
 98, GND, not used, , , , , , UnknownBank
-99, PIO, not used, , , , , , topBank
-100, PIO, not used, , , , , , topBank
-Total Number of Used Pins, 17
+99, PIO, o_Segment2_B, Output, , SB_LVCMOS, No Pull Up, Simple Output, topBank
+100, PIO, o_Segment2_A, Output, , SB_LVCMOS, No Pull Up, Simple Output, topBank
+Total Number of Used Pins, 18

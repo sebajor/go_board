@@ -1,0 +1,20 @@
+Selecting top level module top
+@N: CG364 :"C:\Users\seba\Documents\go_board\uart_complete\uart_rx.v":1:7:1:13|Synthesizing module uart_rx in library work.
+
+@N: CG364 :"C:\Users\seba\Documents\go_board\uart_complete\uart_tx.v":1:7:1:13|Synthesizing module uart_tx in library work.
+
+@W: CL118 :"C:\Users\seba\Documents\go_board\uart_complete\uart_tx.v":62:8:62:11|Latch generated from always block for signal next_state[2:0]; possible missing assignment in an if or case statement.
+@N: CG364 :"C:\Users\seba\Documents\go_board\uart_complete\seven_seg.v":1:7:1:15|Synthesizing module seven_seg in library work.
+
+@N: CG364 :"C:\Users\seba\Documents\go_board\uart_complete\top.v":1:7:1:9|Synthesizing module top in library work.
+
+@N: CL201 :"C:\Users\seba\Documents\go_board\uart_complete\uart_rx.v":29:8:29:13|Trying to extract state machine for register state.
+Extracted state machine for register state
+State machine has 7 reachable states with original encodings of:
+   000
+   001
+   010
+   011
+   100
+   101
+   110

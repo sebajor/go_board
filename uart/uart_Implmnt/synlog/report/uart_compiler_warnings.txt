@@ -1,2 +1,2 @@
-@W: CL169 :"C:\Users\seba\Documents\go_board\uart\top.v":32:1:32:6|Pruning unused register r_uart_char[7:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\Users\seba\Documents\go_board\uart\top.v":37:1:37:6|Pruning unused register r_uart_char[7:0]. Make sure that there are no unused intermediate registers.
 

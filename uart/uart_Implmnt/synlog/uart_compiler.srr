@@ -15,15 +15,16 @@ Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys softwa
 @I::"C:\Users\seba\Documents\go_board\uart\top.v" (library work)
 @I::"C:\Users\seba\Documents\go_board\uart\uart_rx.v" (library work)
 Verilog syntax check successful!
+File C:\Users\seba\Documents\go_board\uart\top.v changed - recompiling
 Selecting top level module top
-@N: CG364 :"C:\Users\seba\Documents\go_board\uart\uart_rx.v":5:7:5:13|Synthesizing module uart_rx in library work.
+@N: CG364 :"C:\Users\seba\Documents\go_board\uart\uart_rx.v":1:7:1:13|Synthesizing module uart_rx in library work.
 
 @N: CG364 :"C:\Users\seba\Documents\go_board\uart\seven_seg.v":1:7:1:15|Synthesizing module seven_seg in library work.
 
 @N: CG364 :"C:\Users\seba\Documents\go_board\uart\top.v":1:7:1:9|Synthesizing module top in library work.
 
-@W: CL169 :"C:\Users\seba\Documents\go_board\uart\top.v":32:1:32:6|Pruning unused register r_uart_char[7:0]. Make sure that there are no unused intermediate registers.
-@N: CL201 :"C:\Users\seba\Documents\go_board\uart\uart_rx.v":31:1:31:6|Trying to extract state machine for register state.
+@W: CL169 :"C:\Users\seba\Documents\go_board\uart\top.v":37:1:37:6|Pruning unused register r_uart_char[7:0]. Make sure that there are no unused intermediate registers.
+@N: CL201 :"C:\Users\seba\Documents\go_board\uart\uart_rx.v":29:8:29:13|Trying to extract state machine for register state.
 Extracted state machine for register state
 State machine has 7 reachable states with original encodings of:
    000
@@ -39,7 +40,7 @@ At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Tue Jul 21 23:35:47 2020
+# Fri Jul 24 00:48:48 2020
 
 ###########################################################]
 Synopsys Netlist Linker, version comp2016q3p1, Build 141R, built Dec  5 2016
@@ -52,7 +53,7 @@ At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Tue Jul 21 23:35:47 2020
+# Fri Jul 24 00:48:48 2020
 
 ###########################################################]
 @END
@@ -62,6 +63,6 @@ At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Tue Jul 21 23:35:47 2020
+# Fri Jul 24 00:48:48 2020
 
 ###########################################################]

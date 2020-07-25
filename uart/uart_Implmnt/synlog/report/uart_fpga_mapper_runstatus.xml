@@ -19,7 +19,7 @@ The file contains the job information from mapper to be displayed as part of the
 </report_link>
 </info>
 <info name="Warnings">
-<data>5</data>
+<data>6</data>
 <report_link name="more">
 <data>C:\Users\seba\Documents\go_board\uart\uart_Implmnt\synlog\report\uart_fpga_mapper_warnings.txt</data>
 </report_link>
@@ -37,10 +37,10 @@ The file contains the job information from mapper to be displayed as part of the
 <data>0h:00m:01s</data>
 </info>
 <info name="Peak Memory">
-<data>135MB</data>
+<data>134MB</data>
 </info>
 <info name="Date &amp; Time">
-<data type="timestamp">1595388950</data>
+<data type="timestamp">1595566131</data>
 </info>
 </job_info>
 </job_run_status>

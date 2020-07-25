@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 11 2017 17:12:22
 
-* File Generated:     Jul 21 2020 23:35:59
+* File Generated:     Jul 24 2020 00:48:58
 
 * Purpose:            
 
@@ -35,13 +35,13 @@ I2053: Starting placement of the design
 =============================================================
 
 Input Design Statistics
-    Number of LUTs      	:	70
-    Number of DFFs      	:	43
+    Number of LUTs      	:	76
+    Number of DFFs      	:	52
     Number of DFFs packed to IO	:	0
     Number of Carrys    	:	8
     Number of RAMs      	:	0
     Number of ROMs      	:	0
-    Number of IOs       	:	16
+    Number of IOs       	:	17
     Number of GBIOs     	:	1
     Number of GBs       	:	0
     Number of WarmBoot  	:	0
@@ -52,7 +52,7 @@ Phase 1
 I2077: Start design legalization
 
 Design Legalization Statistics
-    Number of feedthru LUTs inserted to legalize input of DFFs     	:	0
+    Number of feedthru LUTs inserted to legalize input of DFFs     	:	9
     Number of feedthru LUTs inserted for LUTs driving multiple DFFs	:	0
     Number of LUTs replicated for LUTs driving multiple DFFs       	:	0
     Number of feedthru LUTs inserted to legalize output of CARRYs  	:	0
@@ -61,7 +61,7 @@ Design Legalization Statistics
     Number of inserted LUTs to Legalize IOs with PIN_TYPE= 01xxxx  	:	0
     Number of inserted LUTs to Legalize IOs with PIN_TYPE= 10xxxx  	:	0
     Number of inserted LUTs to Legalize IOs with PIN_TYPE= 11xxxx  	:	0
-    Total LUTs inserted                                            	:	0
+    Total LUTs inserted                                            	:	9
     Total CARRYs inserted                                          	:	0
 
 
@@ -75,23 +75,23 @@ I2088: Phase 2, elapsed time : 0.0 (sec)
 Phase 3
 
 Design Statistics after Packing
-    Number of LUTs      	:	70
-    Number of DFFs      	:	43
+    Number of LUTs      	:	85
+    Number of DFFs      	:	52
     Number of DFFs packed to IO	:	0
     Number of Carrys    	:	8
 
 Device Utilization Summary after Packing
     Sequential LogicCells
-        LUT and DFF      	:	35
+        LUT and DFF      	:	44
         LUT, DFF and CARRY	:	8
     Combinational LogicCells
-        Only LUT         	:	27
+        Only LUT         	:	33
         CARRY Only       	:	0
         LUT with CARRY   	:	0
-    LogicCells                  :	70/1280
-    PLBs                        :	11/160
+    LogicCells                  :	85/1280
+    PLBs                        :	13/160
     BRAMs                       :	0/16
-    IOs and GBIOs               :	17/72
+    IOs and GBIOs               :	18/72
     PLLs                        :	0/0
 
 
@@ -101,29 +101,29 @@ Phase 4
 I2088: Phase 4, elapsed time : 0.1 (sec)
 
 Phase 5
-I2088: Phase 5, elapsed time : 0.1 (sec)
+I2088: Phase 5, elapsed time : 0.0 (sec)
 
 Phase 6
-I2088: Phase 6, elapsed time : 11.2 (sec)
+I2088: Phase 6, elapsed time : 7.4 (sec)
 
 Final Design Statistics
-    Number of LUTs      	:	70
-    Number of DFFs      	:	43
+    Number of LUTs      	:	85
+    Number of DFFs      	:	52
     Number of DFFs packed to IO	:	0
     Number of Carrys    	:	8
     Number of RAMs      	:	0
     Number of ROMs      	:	0
-    Number of IOs       	:	16
+    Number of IOs       	:	17
     Number of GBIOs     	:	1
     Number of GBs       	:	0
     Number of WarmBoot  	:	0
     Number of PLLs      	:	0
 
 Device Utilization Summary
-    LogicCells                  :	70/1280
-    PLBs                        :	15/160
+    LogicCells                  :	85/1280
+    PLBs                        :	22/160
     BRAMs                       :	0/16
-    IOs and GBIOs               :	17/72
+    IOs and GBIOs               :	18/72
     PLLs                        :	0/0
 
 
@@ -140,7 +140,7 @@ analysis after routing.
                      Clock Summary 
 =====================================================================
 Number of clocks: 1
-Clock: top|i_Clk | Frequency: 223.72 MHz | Target: 127.88 MHz
+Clock: top|i_Clk | Frequency: 223.72 MHz | Target: 122.70 MHz
 
 =====================================================================
                      End of Clock Summary
@@ -148,5 +148,5 @@ Clock: top|i_Clk | Frequency: 223.72 MHz | Target: 127.88 MHz
 
 I2054: Placement of design completed successfully
 
-I2076: Placer run-time: 11.7 sec.
+I2076: Placer run-time: 8.0 sec.
 

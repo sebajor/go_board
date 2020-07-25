@@ -1,0 +1,9 @@
+[VIC]
+uart_tx.N_80_cascade_=ltout:in0
+uart_tx.N_88_0_cascade_=ltout:in0
+uart_tx.counter12_6_0_cascade_=ltout:in0
+uart_tx.counter12_6_cascade_=ltout:in0
+uart_tx.counter12_7_3_cascade_=ltout:in0
+uart_tx.counter12_7_cascade_=ltout:in1
+uart_tx.counter_RNI1V9O_0Z0Z_4_cascade_=ltout:in2
+uart_tx.r_data_m_0_cascade_=ltout:in1

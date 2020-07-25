@@ -4,7 +4,7 @@ Version=Lattice Semiconductor Corporation iCEcube - Release: 2017.08.27940 - Bui
 ProjectName=uart
 Vendor=SiliconBlue
 Synthesis=synplify
-ProjectVFiles=seven_seg.v,top.v,uart_rx.v
+ProjectVFiles=seven_seg.v=work,top.v=work,uart_rx.v=work
 ProjectCFiles=
 CurImplementation=uart_Implmnt
 Implementations=uart_Implmnt
@@ -72,7 +72,7 @@ DesignCell=top
 SynthesisSDCFile=uart_Implmnt/uart.scf
 UserPinConstraintFile=
 UserSDCFile=
-PhysicalConstraintFile=
+PhysicalConstraintFile=../Go_Board_Constraints.pcf
 BackendImplPathName=
 Devicevoltage=1.14
 DevicevoltagePerformance=+/-5%(datasheet default)

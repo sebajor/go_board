@@ -15,8 +15,13 @@ module top(
 	output wire o_Segment2_D,
 	output wire o_Segment2_E,
 	output wire o_Segment2_F,
-	output wire o_Segment2_G
+	output wire o_Segment2_G,
+	
+	output wire o_LED_1 
 );
+	assign o_LED_1 = i_Switch_1;
+
+
 	wire valid_msg;
 	wire [7:0] uart_data;
 	
@@ -30,9 +35,11 @@ module top(
 	
 	reg [7:0] r_uart_char;
 	always@(posedge i_Clk)begin
-		if(valid_msg)	r_uart_char <= uart_data;
-	end 
-	
+		if(i_Switch_1)			r_uart_char <= 7'h08;
+		else begin
+			if(valid_msg)	r_uart_char <= uart_data;
+		end 
+	end
 	
 	wire [6:0] seg1, seg2;
 	
@@ -43,6 +50,8 @@ module top(
 		.disp2(seg2)
 	);
 
+	//creo que esta alreves denuevo... 
+	
 	assign o_Segment1_A = seg1[6];
 	assign o_Segment1_B = seg1[5];
 	assign o_Segment1_C = seg1[4];

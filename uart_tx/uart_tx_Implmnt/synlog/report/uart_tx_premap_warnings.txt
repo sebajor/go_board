@@ -1,0 +1,1 @@
+@W: MT529 :"c:\users\seba\documents\go_board\uart_tx\uart_tx.v":26:4:26:9|Found inferred clock top|i_Clk which controls 22 sequential elements including uart_tx.r_data[6:5]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 

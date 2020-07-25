@@ -1,0 +1,2 @@
+@E: CS168 :"C:\Users\seba\Documents\go_board\uart_complete\top.v":60:55:60:55|Port axis_valid does not exist
+

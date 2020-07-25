@@ -6,8 +6,8 @@
 #CUR:"C:\\lscc\\iCEcube2.2017.08\\synpbase\\lib\\vlog\\scemi_objects.v":1595205605
 #CUR:"C:\\lscc\\iCEcube2.2017.08\\synpbase\\lib\\vlog\\scemi_pipes.svh":1595205605
 #CUR:"C:\\Users\\seba\\Documents\\go_board\\uart\\seven_seg.v":1595387719
-#CUR:"C:\\Users\\seba\\Documents\\go_board\\uart\\top.v":1595388574
-#CUR:"C:\\Users\\seba\\Documents\\go_board\\uart\\uart_rx.v":1595388942
+#CUR:"C:\\Users\\seba\\Documents\\go_board\\uart\\top.v":1595566126
+#CUR:"C:\\Users\\seba\\Documents\\go_board\\uart\\uart_rx.v":1595564927
 #numinternalfiles:5
 #defaultlanguage:verilog
 0			"C:\Users\seba\Documents\go_board\uart\seven_seg.v" verilog
