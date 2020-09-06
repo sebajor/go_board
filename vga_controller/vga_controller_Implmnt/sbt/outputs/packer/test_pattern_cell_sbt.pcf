@@ -1,0 +1,124 @@
+ble_pack vga_controller.v_counter_RNILCKS_0_LC_4_1_5 { vga_controller.v_counter_RNILCKS[0] }
+ble_pack vga_controller.v_counter_RNI52T81_3_LC_4_1_6 { vga_controller.v_counter_RNI52T81[3] }
+clb_pack LT_4_1 { vga_controller.v_counter_RNILCKS_0_LC_4_1_5, vga_controller.v_counter_RNI52T81_3_LC_4_1_6 }
+set_location LT_4_1 4 1
+ble_pack vga_controller.v_counter_RNO_0_0_LC_4_2_0 { vga_controller.v_counter_RNO_0[0], vga_controller.un1_v_counter_8_cry_0_c }
+ble_pack vga_controller.v_counter_1_LC_4_2_1 { vga_controller.v_counter_RNO[1], vga_controller.v_counter[1], vga_controller.un1_v_counter_8_cry_1_c }
+ble_pack vga_controller.v_counter_RNO_0_2_LC_4_2_2 { vga_controller.v_counter_RNO_0[2], vga_controller.un1_v_counter_8_cry_2_c }
+ble_pack vga_controller.v_counter_RNO_0_3_LC_4_2_3 { vga_controller.v_counter_RNO_0[3], vga_controller.un1_v_counter_8_cry_3_c }
+ble_pack vga_controller.v_counter_4_LC_4_2_4 { vga_controller.v_counter_RNO[4], vga_controller.v_counter[4], vga_controller.un1_v_counter_8_cry_4_c }
+ble_pack vga_controller.v_counter_5_LC_4_2_5 { vga_controller.v_counter_RNO[5], vga_controller.v_counter[5], vga_controller.un1_v_counter_8_cry_5_c }
+ble_pack vga_controller.v_counter_6_LC_4_2_6 { vga_controller.v_counter_RNO[6], vga_controller.v_counter[6], vga_controller.un1_v_counter_8_cry_6_c }
+ble_pack vga_controller.v_counter_7_LC_4_2_7 { vga_controller.v_counter_RNO[7], vga_controller.v_counter[7], vga_controller.un1_v_counter_8_cry_7_c }
+clb_pack LT_4_2 { vga_controller.v_counter_RNO_0_0_LC_4_2_0, vga_controller.v_counter_1_LC_4_2_1, vga_controller.v_counter_RNO_0_2_LC_4_2_2, vga_controller.v_counter_RNO_0_3_LC_4_2_3, vga_controller.v_counter_4_LC_4_2_4, vga_controller.v_counter_5_LC_4_2_5, vga_controller.v_counter_6_LC_4_2_6, vga_controller.v_counter_7_LC_4_2_7 }
+set_location LT_4_2 4 2
+ble_pack vga_controller.v_counter_8_LC_4_3_0 { vga_controller.v_counter_RNO[8], vga_controller.v_counter[8], vga_controller.un1_v_counter_8_cry_8_c }
+ble_pack vga_controller.v_counter_RNO_0_9_LC_4_3_1 { vga_controller.v_counter_RNO_0[9] }
+ble_pack vga_controller.v_counter_9_LC_4_3_2 { vga_controller.v_counter_RNO[9], vga_controller.v_counter[9] }
+ble_pack vga_controller.h_counter_1_LC_4_3_4 { vga_controller.h_counter_RNO[1], vga_controller.h_counter[1] }
+ble_pack vga_controller.h_counter_0_LC_4_3_6 { vga_controller.h_counter_RNO[0], vga_controller.h_counter[0] }
+clb_pack LT_4_3 { vga_controller.v_counter_8_LC_4_3_0, vga_controller.v_counter_RNO_0_9_LC_4_3_1, vga_controller.v_counter_9_LC_4_3_2, vga_controller.h_counter_1_LC_4_3_4, vga_controller.h_counter_0_LC_4_3_6 }
+set_location LT_4_3 4 3
+ble_pack vga_controller.v_counter_RNI8VJS_1_LC_5_1_0 { vga_controller.v_counter_RNI8VJS[1] }
+ble_pack vga_controller.v_counter_RNI4RRB3_9_LC_5_1_1 { vga_controller.v_counter_RNI4RRB3[9] }
+ble_pack vga_controller.h_counter_RNIPPOQ1_9_LC_5_1_2 { vga_controller.h_counter_RNIPPOQ1[9] }
+ble_pack vga_controller.v_counter_RNIDI8C_0_LC_5_1_3 { vga_controller.v_counter_RNIDI8C[0] }
+ble_pack vga_controller.v_counter_RNITL58_2_LC_5_1_6 { vga_controller.v_counter_RNITL58[2] }
+clb_pack LT_5_1 { vga_controller.v_counter_RNI8VJS_1_LC_5_1_0, vga_controller.v_counter_RNI4RRB3_9_LC_5_1_1, vga_controller.h_counter_RNIPPOQ1_9_LC_5_1_2, vga_controller.v_counter_RNIDI8C_0_LC_5_1_3, vga_controller.v_counter_RNITL58_2_LC_5_1_6 }
+set_location LT_5_1 5 1
+ble_pack vga_controller.v_counter_RNIE0CG_6_LC_5_2_0 { vga_controller.v_counter_RNIE0CG[6] }
+ble_pack vga_controller.v_counter_2_LC_5_2_1 { vga_controller.v_counter_RNO[2], vga_controller.v_counter[2] }
+ble_pack vga_controller.v_counter_RNI2KBG_6_LC_5_2_2 { vga_controller.v_counter_RNI2KBG[6] }
+ble_pack vga_controller.v_counter_3_LC_5_2_3 { vga_controller.v_counter_RNO[3], vga_controller.v_counter[3] }
+ble_pack vga_controller.v_counter_RNIS15I_7_LC_5_2_4 { vga_controller.v_counter_RNIS15I[7] }
+ble_pack vga_controller.v_counter_RNIC9PE1_4_LC_5_2_5 { vga_controller.v_counter_RNIC9PE1[4] }
+ble_pack vga_controller.v_counter_0_LC_5_2_6 { vga_controller.v_counter_RNO[0], vga_controller.v_counter[0] }
+ble_pack vga_controller.v_counter_RNIUM58_1_LC_5_2_7 { vga_controller.v_counter_RNIUM58[1] }
+clb_pack LT_5_2 { vga_controller.v_counter_RNIE0CG_6_LC_5_2_0, vga_controller.v_counter_2_LC_5_2_1, vga_controller.v_counter_RNI2KBG_6_LC_5_2_2, vga_controller.v_counter_3_LC_5_2_3, vga_controller.v_counter_RNIS15I_7_LC_5_2_4, vga_controller.v_counter_RNIC9PE1_4_LC_5_2_5, vga_controller.v_counter_0_LC_5_2_6, vga_controller.v_counter_RNIUM58_1_LC_5_2_7 }
+set_location LT_5_2 5 2
+ble_pack vga_controller.rst_sys_RNI61NB_LC_5_3_0 { vga_controller.rst_sys_RNI61NB }
+ble_pack vga_controller.rst_sys_LC_5_3_1 { vga_controller.rst_sys_THRU_LUT4_0, vga_controller.rst_sys }
+ble_pack vga_controller.h_counter_RNI77491_4_LC_5_3_2 { vga_controller.h_counter_RNI77491[4] }
+ble_pack vga_controller.h_counter_RNIUTFN_0_1_LC_5_3_3 { vga_controller.h_counter_RNIUTFN_0[1] }
+ble_pack vga_controller.h_counter_RNIDRDU1_6_LC_5_3_4 { vga_controller.h_counter_RNIDRDU1[6] }
+ble_pack vga_controller.h_counter_fast_8_LC_5_3_5 { vga_controller.h_counter_fast_RNO[8], vga_controller.h_counter_fast[8] }
+ble_pack vga_controller.h_counter_RNIUTFN_1_1_LC_5_3_6 { vga_controller.h_counter_RNIUTFN_1[1] }
+ble_pack vga_controller.h_counter_RNIUTFN_1_LC_5_3_7 { vga_controller.h_counter_RNIUTFN[1] }
+clb_pack LT_5_3 { vga_controller.rst_sys_RNI61NB_LC_5_3_0, vga_controller.rst_sys_LC_5_3_1, vga_controller.h_counter_RNI77491_4_LC_5_3_2, vga_controller.h_counter_RNIUTFN_0_1_LC_5_3_3, vga_controller.h_counter_RNIDRDU1_6_LC_5_3_4, vga_controller.h_counter_fast_8_LC_5_3_5, vga_controller.h_counter_RNIUTFN_1_1_LC_5_3_6, vga_controller.h_counter_RNIUTFN_1_LC_5_3_7 }
+set_location LT_5_3 5 3
+ble_pack vga_controller.un4_h_counter_cry_1_c_LC_5_4_0 { vga_controller.un4_h_counter_cry_1_c }
+ble_pack vga_controller.h_counter_2_LC_5_4_1 { vga_controller.h_counter_RNO[2], vga_controller.h_counter[2], vga_controller.un4_h_counter_cry_2_c }
+ble_pack vga_controller.h_counter_3_LC_5_4_2 { vga_controller.h_counter_RNO[3], vga_controller.h_counter[3], vga_controller.un4_h_counter_cry_3_c }
+ble_pack vga_controller.un4_h_counter_cry_3_c_RNIFGTG_LC_5_4_3 { vga_controller.un4_h_counter_cry_3_c_RNIFGTG, vga_controller.un4_h_counter_cry_4_c }
+ble_pack vga_controller.un4_h_counter_cry_4_c_RNIHJUG_LC_5_4_4 { vga_controller.un4_h_counter_cry_4_c_RNIHJUG, vga_controller.un4_h_counter_cry_5_c }
+ble_pack vga_controller.h_counter_6_LC_5_4_5 { vga_controller.h_counter_RNO[6], vga_controller.h_counter[6], vga_controller.un4_h_counter_cry_6_c }
+ble_pack vga_controller.un4_h_counter_cry_6_c_RNILP0H_LC_5_4_6 { vga_controller.un4_h_counter_cry_6_c_RNILP0H, vga_controller.un4_h_counter_cry_7_c }
+ble_pack vga_controller.un4_h_counter_cry_7_c_RNINS1H_LC_5_4_7 { vga_controller.un4_h_counter_cry_7_c_RNINS1H, vga_controller.un4_h_counter_cry_8_c }
+clb_pack LT_5_4 { vga_controller.un4_h_counter_cry_1_c_LC_5_4_0, vga_controller.h_counter_2_LC_5_4_1, vga_controller.h_counter_3_LC_5_4_2, vga_controller.un4_h_counter_cry_3_c_RNIFGTG_LC_5_4_3, vga_controller.un4_h_counter_cry_4_c_RNIHJUG_LC_5_4_4, vga_controller.h_counter_6_LC_5_4_5, vga_controller.un4_h_counter_cry_6_c_RNILP0H_LC_5_4_6, vga_controller.un4_h_counter_cry_7_c_RNINS1H_LC_5_4_7 }
+set_location LT_5_4 5 4
+ble_pack vga_controller.h_counter_9_LC_5_5_0 { vga_controller.h_counter_RNO[9], vga_controller.h_counter[9] }
+clb_pack LT_5_5 { vga_controller.h_counter_9_LC_5_5_0 }
+set_location LT_5_5 5 5
+ble_pack vga_controller.h_counter_RNI56P93_8_LC_6_1_1 { vga_controller.h_counter_RNI56P93[8] }
+ble_pack vga_controller.v_counter_RNIL4LI3_9_LC_6_1_3 { vga_controller.v_counter_RNIL4LI3[9] }
+ble_pack vga_controller.v_counter_RNIQ21P3_9_LC_6_1_5 { vga_controller.v_counter_RNIQ21P3[9] }
+clb_pack LT_6_1 { vga_controller.h_counter_RNI56P93_8_LC_6_1_1, vga_controller.v_counter_RNIL4LI3_9_LC_6_1_3, vga_controller.v_counter_RNIQ21P3_9_LC_6_1_5 }
+set_location LT_6_1 6 1
+ble_pack g_px_0_LC_6_2_0 { g_px_RNO[0], g_px[0] }
+ble_pack vga_controller.h_counter_RNI55831_5_LC_6_2_2 { vga_controller.h_counter_RNI55831[5] }
+ble_pack vga_controller.h_counter_RNIEEKH_8_LC_6_2_3 { vga_controller.h_counter_RNIEEKH[8] }
+ble_pack vga_controller.h_counter_RNICC491_9_LC_6_2_4 { vga_controller.h_counter_RNICC491[9] }
+ble_pack vga_controller.h_counter_RNILLOQ1_4_LC_6_2_5 { vga_controller.h_counter_RNILLOQ1[4] }
+ble_pack vga_controller.h_counter_RNI66OB_4_LC_6_2_6 { vga_controller.h_counter_RNI66OB[4] }
+ble_pack b_px_0_LC_6_2_7 { b_px_RNO[0], b_px[0] }
+clb_pack LT_6_2 { g_px_0_LC_6_2_0, vga_controller.h_counter_RNI55831_5_LC_6_2_2, vga_controller.h_counter_RNIEEKH_8_LC_6_2_3, vga_controller.h_counter_RNICC491_9_LC_6_2_4, vga_controller.h_counter_RNILLOQ1_4_LC_6_2_5, vga_controller.h_counter_RNI66OB_4_LC_6_2_6, b_px_0_LC_6_2_7 }
+set_location LT_6_2 6 2
+ble_pack vga_controller.h_counter_RNI55CT_9_LC_6_3_0 { vga_controller.h_counter_RNI55CT[9] }
+ble_pack vga_controller.h_counter_RNI62MR1_4_LC_6_3_1 { vga_controller.h_counter_RNI62MR1[4] }
+ble_pack vga_controller.h_counter_8_LC_6_3_2 { vga_controller.h_counter_RNO[8], vga_controller.h_counter[8] }
+ble_pack vga_controller.h_counter_fast_RNI2PID_0_8_LC_6_3_3 { vga_controller.h_counter_fast_RNI2PID_0[8] }
+ble_pack vga_controller.h_counter_RNIE57V_7_LC_6_3_4 { vga_controller.h_counter_RNIE57V[7] }
+ble_pack vga_controller.h_counter_fast_RNI2PID_8_LC_6_3_5 { vga_controller.h_counter_fast_RNI2PID[8] }
+ble_pack vga_controller.h_counter_RNIE57V_0_7_LC_6_3_6 { vga_controller.h_counter_RNIE57V_0[7] }
+ble_pack vga_controller.h_counter_RNI13BP4_7_LC_6_3_7 { vga_controller.h_counter_RNI13BP4[7] }
+clb_pack LT_6_3 { vga_controller.h_counter_RNI55CT_9_LC_6_3_0, vga_controller.h_counter_RNI62MR1_4_LC_6_3_1, vga_controller.h_counter_8_LC_6_3_2, vga_controller.h_counter_fast_RNI2PID_0_8_LC_6_3_3, vga_controller.h_counter_RNIE57V_7_LC_6_3_4, vga_controller.h_counter_fast_RNI2PID_8_LC_6_3_5, vga_controller.h_counter_RNIE57V_0_7_LC_6_3_6, vga_controller.h_counter_RNI13BP4_7_LC_6_3_7 }
+set_location LT_6_3 6 3
+ble_pack vga_controller.h_counter_7_LC_6_4_0 { vga_controller.h_counter_RNO[7], vga_controller.h_counter[7] }
+ble_pack vga_controller.h_counter_fast_4_LC_6_4_1 { vga_controller.h_counter_fast_RNO[4], vga_controller.h_counter_fast[4] }
+ble_pack vga_controller.h_counter_fast_5_LC_6_4_2 { vga_controller.h_counter_fast_RNO[5], vga_controller.h_counter_fast[5] }
+ble_pack vga_controller.h_counter_fast_7_LC_6_4_3 { vga_controller.h_counter_fast_RNO[7], vga_controller.h_counter_fast[7] }
+ble_pack vga_controller.h_counter_fast_RNI90FJ_7_LC_6_4_4 { vga_controller.h_counter_fast_RNI90FJ[7] }
+ble_pack vga_controller.h_counter_fast_RNIOA8Q_7_LC_6_4_5 { vga_controller.h_counter_fast_RNIOA8Q[7] }
+ble_pack vga_controller.h_counter_RNI0JGT1_8_LC_6_4_6 { vga_controller.h_counter_RNI0JGT1[8] }
+ble_pack vga_controller.h_counter_5_LC_6_4_7 { vga_controller.h_counter_RNO[5], vga_controller.h_counter[5] }
+clb_pack LT_6_4 { vga_controller.h_counter_7_LC_6_4_0, vga_controller.h_counter_fast_4_LC_6_4_1, vga_controller.h_counter_fast_5_LC_6_4_2, vga_controller.h_counter_fast_7_LC_6_4_3, vga_controller.h_counter_fast_RNI90FJ_7_LC_6_4_4, vga_controller.h_counter_fast_RNIOA8Q_7_LC_6_4_5, vga_controller.h_counter_RNI0JGT1_8_LC_6_4_6, vga_controller.h_counter_5_LC_6_4_7 }
+set_location LT_6_4 6 4
+ble_pack vga_controller.v_counter_RNI558Q3_9_LC_7_1_3 { vga_controller.v_counter_RNI558Q3[9] }
+clb_pack LT_7_1 { vga_controller.v_counter_RNI558Q3_9_LC_7_1_3 }
+set_location LT_7_1 7 1
+ble_pack r_px_0_LC_7_3_3 { r_px_RNO[0], r_px[0] }
+clb_pack LT_7_3 { r_px_0_LC_7_3_3 }
+set_location LT_7_3 7 3
+ble_pack vga_controller.h_counter_4_LC_7_4_1 { vga_controller.h_counter_RNO[4], vga_controller.h_counter[4] }
+ble_pack vga_controller.h_counter_RNI88OB_7_LC_7_4_4 { vga_controller.h_counter_RNI88OB[7] }
+ble_pack vga_controller.h_counter_fast_RNIRMHI_5_LC_7_4_5 { vga_controller.h_counter_fast_RNIRMHI[5] }
+ble_pack vga_controller.h_counter_RNIB72A1_4_LC_7_4_6 { vga_controller.h_counter_RNIB72A1[4] }
+ble_pack vga_controller.h_counter_RNIK3RA4_6_LC_7_4_7 { vga_controller.h_counter_RNIK3RA4[6] }
+clb_pack LT_7_4 { vga_controller.h_counter_4_LC_7_4_1, vga_controller.h_counter_RNI88OB_7_LC_7_4_4, vga_controller.h_counter_fast_RNIRMHI_5_LC_7_4_5, vga_controller.h_counter_RNIB72A1_4_LC_7_4_6, vga_controller.h_counter_RNIK3RA4_6_LC_7_4_7 }
+set_location LT_7_4 7 4
+ble_pack vga_controller.r1_rst_LC_8_3_4 { vga_controller.r1_rst_RNO, vga_controller.r1_rst }
+clb_pack LT_8_3 { vga_controller.r1_rst_LC_8_3_4 }
+set_location LT_8_3 8 3
+set_io o_VGA_Red_1 37
+set_io o_VGA_Grn_2 33
+set_io i_Clk 15
+set_io o_VGA_Red_2 40
+set_io o_VGA_HSync 26
+set_io o_VGA_Blu_0 28
+set_io i_Switch_1 53
+set_io o_VGA_VSync 27
+set_io o_VGA_Grn_0 29
+set_io o_VGA_Blu_1 41
+set_io o_VGA_Red_0 36
+set_io o_VGA_Grn_1 30
+set_io o_VGA_Blu_2 42

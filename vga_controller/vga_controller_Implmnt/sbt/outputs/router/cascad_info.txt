@@ -1,0 +1,17 @@
+[VIC]
+N_38_cascade_=ltout:in0
+vga_controller.N_130_cascade_=ltout:in1
+vga_controller.N_26_mux_cascade_=ltout:in0
+vga_controller.N_33_i_cascade_=ltout:in0
+vga_controller.N_53_1_cascade_=ltout:in0
+vga_controller.h_counter11_0_a2_1_0_cascade_=ltout:in0
+vga_controller.h_counter11_cascade_=ltout:in2
+vga_controller.h_sync_i_2_cascade_=ltout:in0
+vga_controller.m20_4_cascade_=ltout:in0
+vga_controller.r_px20_i_0_a2_0_1_cascade_=ltout:in1
+vga_controller.r_px20_i_0_a2_1_1_cascade_=ltout:in3
+vga_controller.un1_r_px20_0_1_cascade_=ltout:in2
+vga_controller.un5_activelt8_0_4_cascade_=ltout:in2
+vga_controller.v_counter_0_i_a2_9_0_cascade_=ltout:in3
+vga_controller.v_counter_0_i_a2_9_1_0_cascade_=ltout:in2
+vga_controller.v_counter_RNO_0Z0Z_9_cascade_=ltout:in1

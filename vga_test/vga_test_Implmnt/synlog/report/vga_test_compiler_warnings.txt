@@ -1,0 +1,8 @@
+@W: CG360 :"C:\Users\seba\Documents\go_board\vga_test\vga_controller.v":41:5:41:10|Removing wire h_sync, as there is no assignment to it.
+@W: CG360 :"C:\Users\seba\Documents\go_board\vga_test\vga_controller.v":42:5:42:10|Removing wire v_sync, as there is no assignment to it.
+@W: CG133 :"C:\Users\seba\Documents\go_board\vga_test\vga_controller.v":72:14:72:20|Object red_reg is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"C:\Users\seba\Documents\go_board\vga_test\vga_controller.v":73:14:73:21|Object blue_reg is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"C:\Users\seba\Documents\go_board\vga_test\vga_controller.v":74:14:74:22|Object green_reg is declared but not assigned. Either assign a value or remove the declaration.
+@W: CL169 :"C:\Users\seba\Documents\go_board\vga_test\vga_controller.v":79:4:79:9|Pruning unused register r1_rst. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\Users\seba\Documents\go_board\vga_test\vga_controller.v":79:4:79:9|Pruning unused register rst_sys. Make sure that there are no unused intermediate registers.
+

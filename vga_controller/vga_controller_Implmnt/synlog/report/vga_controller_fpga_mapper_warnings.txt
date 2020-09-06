@@ -1,0 +1,5 @@
+@W: FX1039 :"c:\users\seba\documents\go_board\vga_controller\vga_controller.v":43:1:43:6|User-specified initial value defined for instance vga_controller.v_counter[9:0] is being ignored. 
+@W: FX1039 :"c:\users\seba\documents\go_board\vga_controller\vga_controller.v":43:1:43:6|User-specified initial value defined for instance vga_controller.h_counter[9:0] is being ignored. 
+@W: BN132 :"c:\users\seba\documents\go_board\vga_controller\test_pattern.v":51:0:51:5|Removing instance r_px[2] because it is equivalent to instance r_px[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\users\seba\documents\go_board\vga_controller\test_pattern.v":51:0:51:5|Removing instance r_px[1] because it is equivalent to instance r_px[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: MT420 |Found inferred clock test_pattern|i_Clk with period 9.05ns. Please declare a user-defined clock on object "p:i_Clk"

@@ -1,0 +1,3 @@
+@W: FX1039 :"c:\users\seba\documents\go_board\vga_test\vga_controller.v":87:1:87:6|User-specified initial value defined for instance v_counter[9:0] is being ignored. 
+@W: FX1039 :"c:\users\seba\documents\go_board\vga_test\vga_controller.v":87:1:87:6|User-specified initial value defined for instance h_counter[9:0] is being ignored. 
+@W: MT420 |Found inferred clock vga_controller|i_Clk with period 6.75ns. Please declare a user-defined clock on object "p:i_Clk"

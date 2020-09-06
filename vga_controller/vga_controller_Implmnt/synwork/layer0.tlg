@@ -1,0 +1,10 @@
+Selecting top level module test_pattern
+@N: CG364 :"C:\Users\seba\Documents\go_board\vga_controller\vga_controller.v":1:7:1:20|Synthesizing module vga_controller in library work.
+
+@N: CG364 :"C:\Users\seba\Documents\go_board\vga_controller\test_pattern.v":1:7:1:18|Synthesizing module test_pattern in library work.
+
+@N: CG179 :"C:\Users\seba\Documents\go_board\vga_controller\test_pattern.v":78:10:78:13|Removing redundant assignment.
+@N: CG179 :"C:\Users\seba\Documents\go_board\vga_controller\test_pattern.v":78:22:78:25|Removing redundant assignment.
+@N: CG179 :"C:\Users\seba\Documents\go_board\vga_controller\test_pattern.v":78:34:78:37|Removing redundant assignment.
+@W: CL279 :"C:\Users\seba\Documents\go_board\vga_controller\test_pattern.v":51:0:51:5|Pruning register bits 2 to 1 of b_px[2:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL279 :"C:\Users\seba\Documents\go_board\vga_controller\test_pattern.v":51:0:51:5|Pruning register bits 2 to 1 of g_px[2:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
