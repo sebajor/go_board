@@ -1,6 +1,0 @@
-[VIC]
-asd.timer12_20_5_cascade_=ltout:in1
-asd.timer12_21_8_cascade_=ltout:in0
-asd.timer_RNO_0Z0Z_1_cascade_=ltout:in0
-asd.un1_current_time_ac0_9_out_cascade_=ltout:in1
-asd.un1_current_time_c1_cascade_=ltout:in1

@@ -1,1 +1,0 @@
-@W: MT529 :"c:\users\seba\documents\go_board\vga_controller\vga_controller.v":43:1:43:6|Found inferred clock test_pattern|i_Clk which controls 27 sequential elements including vga_controller.v_counter[9:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 

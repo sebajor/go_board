@@ -1,1 +1,0 @@
-@W: MT529 :"c:\users\seba\documents\go_board\ex_project\7_seg_counter.v":58:0:58:5|Found inferred clock hello_world|i_Clk which controls 47 sequential elements including asd.timer[24:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 

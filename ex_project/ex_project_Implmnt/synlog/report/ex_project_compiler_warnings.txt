@@ -1,2 +1,0 @@
-@W: CL156 :"C:\Users\seba\Documents\go_board\ex_project\hello_world.v":34:8:34:12|*Input i_Clk to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
-

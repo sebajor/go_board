@@ -1,8 +1,0 @@
-C:\lscc\iCEcube2.2017.08\synpbase\bin64\c_hdl.exe  -osyn  C:\Users\seba\Documents\go_board\vga_test\vga_test_Implmnt\synwork\vga_test_comp.srs  -hdllog  C:\Users\seba\Documents\go_board\vga_test\vga_test_Implmnt\synlog\vga_test_compiler.srr  -encrypt  -mp  4  -verification_mode 0  -verilog  -prodtype  synplify_pro  -primux -fixsmult -infer_seqShift -ice -sdff_counter -nram -divnmod -nostructver   -I C:\Users\seba\Documents\go_board\vga_test\  -I C:\lscc\iCEcube2.2017.08\synpbase\lib   -v2001  -devicelib  C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v  -encrypt  -pro  -dmgen  C:\Users\seba\Documents\go_board\vga_test\vga_test_Implmnt\dm  -ui -fid2 -ram -sharing on -ll 2000 -autosm  -lib work C:\Users\seba\Documents\go_board\vga_test\vga_controller.v 
-rc:0 success:1 runtime:2
-file:C:\Users\seba\Documents\go_board\vga_test\vga_test_Implmnt\synwork\vga_test_comp.srs|io:o|time:1599342608|size:3541|exec:0
-file:C:\Users\seba\Documents\go_board\vga_test\vga_test_Implmnt\synlog\vga_test_compiler.srr|io:o|time:1599342608|size:4408|exec:0
-file:C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v|io:i|time:1595205602|size:224837|exec:0
-file:C:\Users\seba\Documents\go_board\vga_test\vga_controller.v|io:i|time:1599342604|size:3429|exec:0
-file:C:\lscc\iCEcube2.2017.08\synpbase\bin\c_hdl.exe|io:i|time:1595205596|size:1338368|exec:1
-file:C:\lscc\iCEcube2.2017.08\synpbase\bin64\c_hdl.exe|io:i|time:1595205598|size:1754112|exec:1

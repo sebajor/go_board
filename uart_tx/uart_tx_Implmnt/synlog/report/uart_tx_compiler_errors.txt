@@ -1,2 +1,0 @@
-@E: CS153 :"C:\Users\seba\Documents\go_board\uart_tx\uart_tx.v":42:48:42:48|Can't mix blocking and non-blocking assignments to a variable
-

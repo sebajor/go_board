@@ -1,6 +1,0 @@
-Selecting top level module top
-@N: CG364 :"C:\Users\seba\Documents\go_board\uart_tx\uart_tx.v":1:7:1:13|Synthesizing module uart_tx in library work.
-
-@W: CL118 :"C:\Users\seba\Documents\go_board\uart_tx\uart_tx.v":62:8:62:11|Latch generated from always block for signal next_state[2:0]; possible missing assignment in an if or case statement.
-@N: CG364 :"C:\Users\seba\Documents\go_board\uart_tx\top.v":1:7:1:9|Synthesizing module top in library work.
-

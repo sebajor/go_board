@@ -1,0 +1,30 @@
+pag wenas:
+http://aprs.gids.nl/nmea/#zda
+
+
+
+herramientas:
+lady heather 
+ublox u-center
+
+
+opciones ali
+
+2017-03-29 custom board with surplus cts 970-2178 OCXO. gps is u-blox NEO-7M-0-000
+https://www.aliexpress.com/item/33052554366.html?spm=a2g0o.productlist.0.0.3d94466a40UzZX&algo_pvid=d8e22e7d-dce6-4442-a4a2-b66eaf428d72&algo_expid=d8e22e7d-dce6-4442-a4a2-b66eaf428d72-7&btsid=0bb0623c16050633483668443e25c8&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_
+
+custom board with surplus bliley nvg47a1282 OCXO. gps is unknown. compact design.
+https://www.aliexpress.com/item/4001269290751.html?spm=a2g0o.productlist.0.0.3d94466a40UzZX&algo_pvid=d8e22e7d-dce6-4442-a4a2-b66eaf428d72&algo_expid=d8e22e7d-dce6-4442-a4a2-b66eaf428d72-8&btsid=0bb0623c16050633483668443e25c8&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_
+
+
+
+nota:
+error en freq --> 2Hz en 100GHz
+
+
+datos sobre el gpsdo de aliexpress
+https://www.google.com/search?client=firefox-b-d&q=bg7tbl+gpsdo+manual
+https://radioaficion.com/news/bg7tbl-gpsdo/
+https://www.eevblog.com/forum/testgear/bg7tbl-gpsdo-master-reference/
+http://www.ke5fx.com/gpscomp.htm
+

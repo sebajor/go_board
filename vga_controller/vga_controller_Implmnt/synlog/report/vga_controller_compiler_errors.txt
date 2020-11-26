@@ -1,4 +1,0 @@
-@E: CS179 :"C:\Users\seba\Documents\go_board\vga_controller\test_pattern.v":32:7:32:10|Assignment target r_px must be a net type
-@E: CS179 :"C:\Users\seba\Documents\go_board\vga_controller\test_pattern.v":33:7:33:10|Assignment target g_px must be a net type
-@E: CS179 :"C:\Users\seba\Documents\go_board\vga_controller\test_pattern.v":34:7:34:10|Assignment target b_px must be a net type
-

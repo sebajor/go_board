@@ -1,2 +1,0 @@
-@W: CL118 :"C:\Users\seba\Documents\go_board\uart_complete\uart_tx.v":62:8:62:11|Latch generated from always block for signal next_state[2:0]; possible missing assignment in an if or case statement.
-

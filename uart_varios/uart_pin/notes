@@ -1,0 +1,5 @@
+In this model we use the uart of the go board and a second one driven 
+by some pmod pins and a ftdi chip (i think?)
+
+
+It is just a loopback between the two devs

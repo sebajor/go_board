@@ -1,2 +1,0 @@
-@E: CG906 :"C:\Users\seba\Documents\go_board\uart\top.v":33:5:33:7|Reference to unknown variable rst.
-
