@@ -1,2 +1,2 @@
 # go_board
-go board projects
+go board scripts
