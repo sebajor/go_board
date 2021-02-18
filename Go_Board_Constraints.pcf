@@ -67,5 +67,5 @@ set_io io_PMOD_3 63
 set_io io_PMOD_4 62
 set_io io_PMOD_7 78
 set_io io_PMOD_8 79
-set_io io_PMOD_9 8
+set_io io_PMOD_9 80
 set_io io_PMOD_10 81

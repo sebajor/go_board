@@ -1,0 +1,1813 @@
+yosys -p "read_verilog top.v i2s_pmod.v i2s_loop.v ; synth_ice40 -blif top.blif"
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 UNKNOWN, gcc 10.2.0 -march=x86-64 -mtune=generic -O2 -fno-plt -fPIC -Os)
+
+
+-- Running command `read_verilog top.v i2s_pmod.v i2s_loop.v ; synth_ice40 -blif top.blif' --
+
+1. Executing Verilog-2005 frontend: top.v
+Parsing Verilog input from `top.v' to AST representation.
+Generating RTLIL representation for module `\top'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: i2s_pmod.v
+Parsing Verilog input from `i2s_pmod.v' to AST representation.
+Generating RTLIL representation for module `\i2s_pmod_v2'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: i2s_loop.v
+Parsing Verilog input from `i2s_loop.v' to AST representation.
+Generating RTLIL representation for module `\i2s_loop'.
+Successfully finished Verilog frontend.
+
+4. Executing SYNTH_ICE40 pass.
+
+4.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/ice40/cells_sim.v
+Parsing Verilog input from `/usr/bin/../share/yosys/ice40/cells_sim.v' to AST representation.
+Generating RTLIL representation for module `\SB_IO'.
+Generating RTLIL representation for module `\SB_GB_IO'.
+Generating RTLIL representation for module `\SB_GB'.
+Generating RTLIL representation for module `\SB_LUT4'.
+Generating RTLIL representation for module `\SB_CARRY'.
+Generating RTLIL representation for module `\SB_DFF'.
+Generating RTLIL representation for module `\SB_DFFE'.
+Generating RTLIL representation for module `\SB_DFFSR'.
+Generating RTLIL representation for module `\SB_DFFR'.
+Generating RTLIL representation for module `\SB_DFFSS'.
+Generating RTLIL representation for module `\SB_DFFS'.
+Generating RTLIL representation for module `\SB_DFFESR'.
+Generating RTLIL representation for module `\SB_DFFER'.
+Generating RTLIL representation for module `\SB_DFFESS'.
+Generating RTLIL representation for module `\SB_DFFES'.
+Generating RTLIL representation for module `\SB_DFFN'.
+Generating RTLIL representation for module `\SB_DFFNE'.
+Generating RTLIL representation for module `\SB_DFFNSR'.
+Generating RTLIL representation for module `\SB_DFFNR'.
+Generating RTLIL representation for module `\SB_DFFNSS'.
+Generating RTLIL representation for module `\SB_DFFNS'.
+Generating RTLIL representation for module `\SB_DFFNESR'.
+Generating RTLIL representation for module `\SB_DFFNER'.
+Generating RTLIL representation for module `\SB_DFFNESS'.
+Generating RTLIL representation for module `\SB_DFFNES'.
+Generating RTLIL representation for module `\SB_RAM40_4K'.
+Generating RTLIL representation for module `\SB_RAM40_4KNR'.
+Generating RTLIL representation for module `\SB_RAM40_4KNW'.
+Generating RTLIL representation for module `\SB_RAM40_4KNRNW'.
+Generating RTLIL representation for module `\ICESTORM_LC'.
+Generating RTLIL representation for module `\SB_PLL40_CORE'.
+Generating RTLIL representation for module `\SB_PLL40_PAD'.
+Generating RTLIL representation for module `\SB_PLL40_2_PAD'.
+Generating RTLIL representation for module `\SB_PLL40_2F_CORE'.
+Generating RTLIL representation for module `\SB_PLL40_2F_PAD'.
+Generating RTLIL representation for module `\SB_WARMBOOT'.
+Generating RTLIL representation for module `\SB_SPRAM256KA'.
+Generating RTLIL representation for module `\SB_HFOSC'.
+Generating RTLIL representation for module `\SB_LFOSC'.
+Generating RTLIL representation for module `\SB_RGBA_DRV'.
+Generating RTLIL representation for module `\SB_LED_DRV_CUR'.
+Generating RTLIL representation for module `\SB_RGB_DRV'.
+Generating RTLIL representation for module `\SB_I2C'.
+Generating RTLIL representation for module `\SB_SPI'.
+Generating RTLIL representation for module `\SB_LEDDA_IP'.
+Generating RTLIL representation for module `\SB_FILTER_50NS'.
+Generating RTLIL representation for module `\SB_IO_I3C'.
+Generating RTLIL representation for module `\SB_IO_OD'.
+Generating RTLIL representation for module `\SB_MAC16'.
+Successfully finished Verilog frontend.
+
+4.2. Executing HIERARCHY pass (managing design hierarchy).
+
+4.2.1. Finding top of design hierarchy..
+root of   1 design levels: i2s_loop            
+root of   0 design levels: i2s_pmod_v2         
+root of   2 design levels: top                 
+Automatically selected top as design top module.
+
+4.2.2. Analyzing design hierarchy..
+Top module:  \top
+Used module:     \i2s_loop
+Used module:         \i2s_pmod_v2
+
+4.2.3. Executing AST frontend in derive mode using pre-parsed AST for module `\i2s_loop'.
+Parameter \CLK_FREQ = 25000000
+Parameter \MCLK_DEC = 1
+Parameter \LRCK_DEC = 8
+Parameter \SCLK_DEC = 2
+Generating RTLIL representation for module `$paramod\i2s_loop\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2'.
+
+4.2.4. Executing AST frontend in derive mode using pre-parsed AST for module `\i2s_pmod_v2'.
+Parameter \CLK_FREQ = 25000000
+Parameter \MCLK_DEC = 1
+Parameter \LRCK_DEC = 8
+Parameter \SCLK_DEC = 2
+Generating RTLIL representation for module `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2'.
+
+4.2.5. Analyzing design hierarchy..
+Top module:  \top
+Used module:     $paramod\i2s_loop\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2
+Used module:         \i2s_pmod_v2
+
+4.2.6. Executing AST frontend in derive mode using pre-parsed AST for module `\i2s_pmod_v2'.
+Parameter \CLK_FREQ = 25000000
+Parameter \MCLK_DEC = 1
+Parameter \LRCK_DEC = 8
+Parameter \SCLK_DEC = 2
+Found cached RTLIL representation for module `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2'.
+
+4.2.7. Analyzing design hierarchy..
+Top module:  \top
+Used module:     $paramod\i2s_loop\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2
+Used module:         $paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2
+
+4.2.8. Analyzing design hierarchy..
+Top module:  \top
+Used module:     $paramod\i2s_loop\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2
+Used module:         $paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2
+Removing unused module `\i2s_loop'.
+Removing unused module `\i2s_pmod_v2'.
+Removed 2 unused modules.
+
+4.3. Executing PROC pass (convert processes to netlists).
+
+4.3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+4.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 2 switch rules as full_case in process $proc$i2s_pmod.v:174$69 in module $paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.
+Marked 2 switch rules as full_case in process $proc$i2s_pmod.v:153$66 in module $paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.
+Marked 2 switch rules as full_case in process $proc$i2s_pmod.v:119$61 in module $paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.
+Marked 3 switch rules as full_case in process $proc$i2s_pmod.v:80$49 in module $paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.
+Removed a total of 0 dead cases.
+
+4.3.3. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:170$90'.
+  Set init value: \adc_l_tdata_r = 0
+Found init rule in `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:170$89'.
+  Set init value: \adc_r_tdata_r = 0
+Found init rule in `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:168$88'.
+  Set init value: \adc_tvalid_r = 2'00
+Found init rule in `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:152$87'.
+  Set init value: \adc_r_shift = 64'0000000000000000000000000000000000000000000000000000000000000000
+Found init rule in `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:152$86'.
+  Set init value: \adc_l_shift = 64'0000000000000000000000000000000000000000000000000000000000000000
+Found init rule in `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:142$85'.
+  Set init value: \adc_lrck_dly = 3'000
+Found init rule in `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:142$84'.
+  Set init value: \adc_sclk_dly = 3'000
+Found init rule in `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:142$83'.
+  Set init value: \sync_adc_dat = 3'000
+Found init rule in `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:135$82'.
+  Set init value: \lrck_dly_2 = 2'00
+Found init rule in `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:112$81'.
+  Set init value: \dac_out = 1'0
+Found init rule in `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:78$80'.
+  Set init value: \dac_l_shift = 64'0000000000000000000000000000000000000000000000000000000000000000
+Found init rule in `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:78$79'.
+  Set init value: \dac_r_shift = 64'0000000000000000000000000000000000000000000000000000000000000000
+Found init rule in `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:76$78'.
+  Set init value: \dac_tready_r = 2'11
+Found init rule in `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:69$77'.
+  Set init value: \lrck_dly = 1'0
+Found init rule in `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:53$76'.
+  Set init value: \counter = 9'000000000
+
+4.3.4. Executing PROC_ARST pass (detect async resets in processes).
+
+4.3.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:170$90'.
+     1/1: $1\adc_l_tdata_r[31:0]
+Creating decoders for process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:170$89'.
+     1/1: $1\adc_r_tdata_r[31:0]
+Creating decoders for process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:168$88'.
+     1/1: $1\adc_tvalid_r[1:0]
+Creating decoders for process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:152$87'.
+     1/1: $1\adc_r_shift[63:0]
+Creating decoders for process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:152$86'.
+     1/1: $1\adc_l_shift[63:0]
+Creating decoders for process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:142$85'.
+     1/1: $1\adc_lrck_dly[2:0]
+Creating decoders for process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:142$84'.
+     1/1: $1\adc_sclk_dly[2:0]
+Creating decoders for process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:142$83'.
+     1/1: $1\sync_adc_dat[2:0]
+Creating decoders for process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:135$82'.
+     1/1: $1\lrck_dly_2[1:0]
+Creating decoders for process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:112$81'.
+     1/1: $1\dac_out[0:0]
+Creating decoders for process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:78$80'.
+     1/1: $1\dac_l_shift[63:0]
+Creating decoders for process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:78$79'.
+     1/1: $1\dac_r_shift[63:0]
+Creating decoders for process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:76$78'.
+     1/1: $1\dac_tready_r[1:0]
+Creating decoders for process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:69$77'.
+     1/1: $1\lrck_dly[0:0]
+Creating decoders for process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:53$76'.
+     1/1: $1\counter[8:0]
+Creating decoders for process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:174$69'.
+     1/4: $0\adc_tvalid_r[1:0] [1]
+     2/4: $0\adc_tvalid_r[1:0] [0]
+     3/4: $0\adc_r_tdata_r[31:0]
+     4/4: $0\adc_l_tdata_r[31:0]
+Creating decoders for process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:153$66'.
+     1/2: $0\adc_r_shift[63:0]
+     2/2: $0\adc_l_shift[63:0]
+Creating decoders for process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:143$65'.
+     1/3: $0\adc_lrck_dly[2:0]
+     2/3: $0\adc_sclk_dly[2:0]
+     3/3: $0\sync_adc_dat[2:0]
+Creating decoders for process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:136$64'.
+     1/1: $0\lrck_dly_2[1:0]
+Creating decoders for process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:119$61'.
+     1/1: $0\dac_out[0:0]
+Creating decoders for process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:80$49'.
+     1/6: $0\dac_r_shift[63:0] [63:32]
+     2/6: $0\dac_r_shift[63:0] [31:0]
+     3/6: $0\dac_l_shift[63:0] [31:0]
+     4/6: $0\dac_tready_r[1:0] [1]
+     5/6: $0\dac_tready_r[1:0] [0]
+     6/6: $0\dac_l_shift[63:0] [63:32]
+Creating decoders for process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:70$48'.
+     1/1: $0\lrck_dly[0:0]
+Creating decoders for process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:55$46'.
+     1/1: $0\counter[8:0]
+
+4.3.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+4.3.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.\adc_tvalid_r' using process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:174$69'.
+  created $dff cell `$procdff$196' with positive edge clock.
+Creating register for signal `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.\adc_r_tdata_r' using process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:174$69'.
+  created $dff cell `$procdff$197' with positive edge clock.
+Creating register for signal `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.\adc_l_tdata_r' using process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:174$69'.
+  created $dff cell `$procdff$198' with positive edge clock.
+Creating register for signal `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.\adc_l_shift' using process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:153$66'.
+  created $dff cell `$procdff$199' with positive edge clock.
+Creating register for signal `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.\adc_r_shift' using process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:153$66'.
+  created $dff cell `$procdff$200' with positive edge clock.
+Creating register for signal `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.\sync_adc_dat' using process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:143$65'.
+  created $dff cell `$procdff$201' with positive edge clock.
+Creating register for signal `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.\adc_sclk_dly' using process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:143$65'.
+  created $dff cell `$procdff$202' with positive edge clock.
+Creating register for signal `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.\adc_lrck_dly' using process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:143$65'.
+  created $dff cell `$procdff$203' with positive edge clock.
+Creating register for signal `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.\lrck_dly_2' using process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:136$64'.
+  created $dff cell `$procdff$204' with positive edge clock.
+Creating register for signal `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.\dac_out' using process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:119$61'.
+  created $dff cell `$procdff$205' with positive edge clock.
+Creating register for signal `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.\dac_tready_r' using process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:80$49'.
+  created $dff cell `$procdff$206' with positive edge clock.
+Creating register for signal `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.\dac_r_shift' using process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:80$49'.
+  created $dff cell `$procdff$207' with positive edge clock.
+Creating register for signal `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.\dac_l_shift' using process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:80$49'.
+  created $dff cell `$procdff$208' with positive edge clock.
+Creating register for signal `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.\lrck_dly' using process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:70$48'.
+  created $dff cell `$procdff$209' with positive edge clock.
+Creating register for signal `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.\counter' using process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:55$46'.
+  created $dff cell `$procdff$210' with positive edge clock.
+
+4.3.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:170$90'.
+Removing empty process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:170$89'.
+Removing empty process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:168$88'.
+Removing empty process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:152$87'.
+Removing empty process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:152$86'.
+Removing empty process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:142$85'.
+Removing empty process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:142$84'.
+Removing empty process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:142$83'.
+Removing empty process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:135$82'.
+Removing empty process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:112$81'.
+Removing empty process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:78$80'.
+Removing empty process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:78$79'.
+Removing empty process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:76$78'.
+Removing empty process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:69$77'.
+Removing empty process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:53$76'.
+Found and cleaned up 4 empty switches in `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:174$69'.
+Removing empty process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:174$69'.
+Found and cleaned up 2 empty switches in `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:153$66'.
+Removing empty process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:153$66'.
+Removing empty process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:143$65'.
+Removing empty process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:136$64'.
+Found and cleaned up 2 empty switches in `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:119$61'.
+Removing empty process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:119$61'.
+Found and cleaned up 5 empty switches in `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:80$49'.
+Removing empty process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:80$49'.
+Removing empty process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:70$48'.
+Removing empty process `$paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.$proc$i2s_pmod.v:55$46'.
+Cleaned up 13 empty switches.
+
+4.4. Executing FLATTEN pass (flatten design).
+Using template $paramod\i2s_loop\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2 for cells of type $paramod\i2s_loop\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.
+Using template $paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2 for cells of type $paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.
+<suppressed ~2 debug messages>
+No more expansions possible.
+Deleting now unused module $paramod\i2s_pmod_v2\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.
+Deleting now unused module $paramod\i2s_loop\CLK_FREQ=25000000\MCLK_DEC=1\LRCK_DEC=8\SCLK_DEC=2.
+
+4.5. Executing TRIBUF pass.
+
+4.6. Executing DEMINOUT pass (demote inout ports to input or output).
+
+4.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~1 debug messages>
+
+4.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 0 unused cells and 70 unused wires.
+<suppressed ~1 debug messages>
+
+4.9. Executing CHECK pass (checking for obvious problems).
+checking module top..
+found and reported 0 problems.
+
+4.10. Executing OPT pass (performing simple optimizations).
+
+4.10.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+4.10.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
+
+4.10.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~13 debug messages>
+
+4.10.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+    New input vector for $reduce_or cell $techmap\i2s_loop.i2s_pmod_inst.$reduce_or$i2s_pmod.v:81$51: { \i2s_loop.i2s_pmod_inst.dac_tready_r [0] \i2s_loop.i2s_pmod_inst.dac_tready_r [1] }
+    New input vector for $reduce_or cell $techmap\i2s_loop.i2s_pmod_inst.$reduce_or$i2s_pmod.v:81$50: { \i2s_loop.i2s_pmod_inst.adc_tvalid_r [0] \i2s_loop.i2s_pmod_inst.adc_tvalid_r [1] }
+    New input vector for $reduce_and cell $techmap\i2s_loop.i2s_pmod_inst.$reduce_and$i2s_pmod.v:117$60: { \i2s_loop.i2s_pmod_inst.counter [0] \i2s_loop.i2s_pmod_inst.counter [1] }
+  Optimizing cells in module \top.
+Performed a total of 3 changes.
+
+4.10.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+4.10.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+4.10.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+4.10.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+4.10.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.10.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~13 debug messages>
+
+4.10.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+4.10.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+4.10.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+4.10.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+4.10.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+4.10.16. Finished OPT passes. (There is nothing left to do.)
+
+4.11. Executing WREDUCE pass (reducing word size of cells).
+Removed top 26 bits (of 32) from port A of cell top.$techmap\i2s_loop.i2s_pmod_inst.$sub$i2s_pmod.v:115$59 ($sub).
+Removed top 26 bits (of 32) from port Y of cell top.$techmap\i2s_loop.i2s_pmod_inst.$sub$i2s_pmod.v:115$59 ($sub).
+Removed top 31 bits (of 32) from port B of cell top.$techmap\i2s_loop.i2s_pmod_inst.$add$i2s_pmod.v:56$47 ($add).
+Removed top 23 bits (of 32) from port Y of cell top.$techmap\i2s_loop.i2s_pmod_inst.$add$i2s_pmod.v:56$47 ($add).
+
+4.12. Executing PEEPOPT pass (run peephole optimizers).
+
+4.13. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+4.14. Executing SHARE pass (SAT-based resource sharing).
+
+4.15. Executing TECHMAP pass (map to technology primitives).
+
+4.15.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/cmp2lut.v
+Parsing Verilog input from `/usr/bin/../share/yosys/cmp2lut.v' to AST representation.
+Generating RTLIL representation for module `\_90_lut_cmp_'.
+Successfully finished Verilog frontend.
+
+4.15.2. Continuing TECHMAP pass.
+No more expansions possible.
+
+4.16. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+4.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+4.18. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module top:
+  creating $macc model for $techmap\i2s_loop.i2s_pmod_inst.$add$i2s_pmod.v:56$47 ($add).
+  creating $macc model for $techmap\i2s_loop.i2s_pmod_inst.$sub$i2s_pmod.v:115$59 ($sub).
+  creating $alu model for $macc $techmap\i2s_loop.i2s_pmod_inst.$sub$i2s_pmod.v:115$59.
+  creating $alu model for $macc $techmap\i2s_loop.i2s_pmod_inst.$add$i2s_pmod.v:56$47.
+  creating $alu cell for $techmap\i2s_loop.i2s_pmod_inst.$add$i2s_pmod.v:56$47: $auto$alumacc.cc:474:replace_alu$211
+  creating $alu cell for $techmap\i2s_loop.i2s_pmod_inst.$sub$i2s_pmod.v:115$59: $auto$alumacc.cc:474:replace_alu$214
+  created 2 $alu and 0 $macc cells.
+
+4.19. Executing OPT pass (performing simple optimizations).
+
+4.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+4.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+4.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~13 debug messages>
+
+4.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+4.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+4.19.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+4.19.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+4.19.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+4.19.9. Finished OPT passes. (There is nothing left to do.)
+
+4.20. Executing FSM pass (extract and optimize FSM).
+
+4.20.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+4.20.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+4.20.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+4.20.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+4.20.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+4.20.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+4.20.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+4.20.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+4.21. Executing OPT pass (performing simple optimizations).
+
+4.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+4.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+4.21.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+4.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+4.21.5. Finished fast OPT passes.
+
+4.22. Executing MEMORY pass.
+
+4.22.1. Executing MEMORY_DFF pass (merging $dff cells to $memrd and $memwr).
+
+4.22.2. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+4.22.3. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+4.22.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+4.22.5. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+4.23. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+4.24. Executing MEMORY_BRAM pass (mapping $mem cells to block memories).
+
+4.25. Executing TECHMAP pass (map to technology primitives).
+
+4.25.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/ice40/brams_map.v
+Parsing Verilog input from `/usr/bin/../share/yosys/ice40/brams_map.v' to AST representation.
+Generating RTLIL representation for module `\$__ICE40_RAM4K'.
+Generating RTLIL representation for module `\$__ICE40_RAM4K_M0'.
+Generating RTLIL representation for module `\$__ICE40_RAM4K_M123'.
+Successfully finished Verilog frontend.
+
+4.25.2. Continuing TECHMAP pass.
+No more expansions possible.
+
+4.26. Executing ICE40_BRAMINIT pass.
+
+4.27. Executing OPT pass (performing simple optimizations).
+
+4.27.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+4.27.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+4.27.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+4.27.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+4.27.5. Finished fast OPT passes.
+
+4.28. Executing MEMORY_MAP pass (converting $mem cells to logic and flip-flops).
+
+4.29. Executing OPT pass (performing simple optimizations).
+
+4.29.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+4.29.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+4.29.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~13 debug messages>
+
+4.29.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+4.29.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+4.29.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+4.29.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+4.29.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+4.29.9. Finished OPT passes. (There is nothing left to do.)
+
+4.30. Executing TECHMAP pass (map to technology primitives).
+
+4.30.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/usr/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+4.30.2. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/ice40/arith_map.v
+Parsing Verilog input from `/usr/bin/../share/yosys/ice40/arith_map.v' to AST representation.
+Generating RTLIL representation for module `\_80_ice40_alu'.
+Successfully finished Verilog frontend.
+
+4.30.3. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $dff.
+Using template $paramod\_80_ice40_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=1\B_WIDTH=9\Y_WIDTH=9 for cells of type $alu.
+Using template $paramod\_80_ice40_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=6\B_WIDTH=5\Y_WIDTH=6 for cells of type $alu.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $not.
+Using template $paramod$constmap:12915ad0856e3e72a827bd186b7389c7621086bf$paramod$da7e9baf6efcb03e02916bce83d50ebf543d5907\_90_shift_shiftx for cells of type $shiftx.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $pos.
+Using extmapper simplemap for cells of type $xor.
+No more expansions possible.
+<suppressed ~242 debug messages>
+
+4.31. Executing ICE40_OPT pass (performing simple optimizations).
+
+4.31.1. Running ICE40 specific optimizations.
+
+4.31.2. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~151 debug messages>
+
+4.31.3. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+<suppressed ~21 debug messages>
+Removed a total of 7 cells.
+
+4.31.4. Executing OPT_RMDFF pass (remove dff with constant values).
+
+4.31.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 530 unused cells and 48 unused wires.
+<suppressed ~531 debug messages>
+
+4.31.6. Rerunning OPT passes. (Removed registers in this run.)
+
+4.31.7. Running ICE40 specific optimizations.
+Optimized away SB_CARRY cell top.$auto$alumacc.cc:474:replace_alu$211.slice[0].carry: CO=\i2s_loop.i2s_pmod_inst.counter [0]
+Optimized away SB_CARRY cell top.$auto$alumacc.cc:474:replace_alu$214.slice[0].carry: CO=1'1
+Mapping SB_LUT4 cell top.$auto$alumacc.cc:474:replace_alu$211.slice[1].adder back to logic.
+Mapping SB_LUT4 cell top.$auto$alumacc.cc:474:replace_alu$214.slice[1].adder back to logic.
+
+4.31.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~35 debug messages>
+
+4.31.9. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+4.31.10. Executing OPT_RMDFF pass (remove dff with constant values).
+
+4.31.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 0 unused cells and 6 unused wires.
+<suppressed ~1 debug messages>
+
+4.31.12. Rerunning OPT passes. (Removed registers in this run.)
+
+4.31.13. Running ICE40 specific optimizations.
+Optimized away SB_CARRY cell top.$auto$alumacc.cc:474:replace_alu$214.slice[1].carry: CO=1'1
+Mapping SB_LUT4 cell top.$auto$alumacc.cc:474:replace_alu$214.slice[2].adder back to logic.
+
+4.31.14. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~24 debug messages>
+
+4.31.15. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+4.31.16. Executing OPT_RMDFF pass (remove dff with constant values).
+
+4.31.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 1 unused cells and 4 unused wires.
+<suppressed ~2 debug messages>
+
+4.31.18. Rerunning OPT passes. (Removed registers in this run.)
+
+4.31.19. Running ICE40 specific optimizations.
+Optimized away SB_CARRY cell top.$auto$alumacc.cc:474:replace_alu$214.slice[2].carry: CO=1'1
+Mapping SB_LUT4 cell top.$auto$alumacc.cc:474:replace_alu$214.slice[3].adder back to logic.
+
+4.31.20. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~33 debug messages>
+
+4.31.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+4.31.22. Executing OPT_RMDFF pass (remove dff with constant values).
+
+4.31.23. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 1 unused cells and 4 unused wires.
+<suppressed ~2 debug messages>
+
+4.31.24. Rerunning OPT passes. (Removed registers in this run.)
+
+4.31.25. Running ICE40 specific optimizations.
+Optimized away SB_CARRY cell top.$auto$alumacc.cc:474:replace_alu$214.slice[3].carry: CO=1'1
+Mapping SB_LUT4 cell top.$auto$alumacc.cc:474:replace_alu$214.slice[4].adder back to logic.
+
+4.31.26. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~49 debug messages>
+
+4.31.27. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+4.31.28. Executing OPT_RMDFF pass (remove dff with constant values).
+
+4.31.29. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 1 unused cells and 4 unused wires.
+<suppressed ~2 debug messages>
+
+4.31.30. Rerunning OPT passes. (Removed registers in this run.)
+
+4.31.31. Running ICE40 specific optimizations.
+Optimized away SB_CARRY cell top.$auto$alumacc.cc:474:replace_alu$214.slice[4].carry: CO=1'1
+Mapping SB_LUT4 cell top.$auto$alumacc.cc:474:replace_alu$214.slice[5].adder back to logic.
+
+4.31.32. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~80 debug messages>
+
+4.31.33. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+4.31.34. Executing OPT_RMDFF pass (remove dff with constant values).
+
+4.31.35. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 1 unused cells and 7 unused wires.
+<suppressed ~2 debug messages>
+
+4.31.36. Rerunning OPT passes. (Removed registers in this run.)
+
+4.31.37. Running ICE40 specific optimizations.
+
+4.31.38. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~1 debug messages>
+
+4.31.39. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+4.31.40. Executing OPT_RMDFF pass (remove dff with constant values).
+
+4.31.41. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+4.31.42. Rerunning OPT passes. (Removed registers in this run.)
+
+4.31.43. Running ICE40 specific optimizations.
+
+4.31.44. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+4.31.45. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+4.31.46. Executing OPT_RMDFF pass (remove dff with constant values).
+
+4.31.47. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+4.31.48. Finished OPT passes. (There is nothing left to do.)
+
+4.32. Executing DFFSR2DFF pass (mapping DFFSR cells to simpler FFs).
+
+4.33. Executing DFF2DFFE pass (transform $dff to $dffe where applicable).
+Selected cell types for direct conversion:
+  $_DFF_PP1_ -> $__DFFE_PP1
+  $_DFF_PP0_ -> $__DFFE_PP0
+  $_DFF_PN1_ -> $__DFFE_PN1
+  $_DFF_PN0_ -> $__DFFE_PN0
+  $_DFF_NP1_ -> $__DFFE_NP1
+  $_DFF_NP0_ -> $__DFFE_NP0
+  $_DFF_NN1_ -> $__DFFE_NN1
+  $_DFF_NN0_ -> $__DFFE_NN0
+  $_DFF_N_ -> $_DFFE_NP_
+  $_DFF_P_ -> $_DFFE_PP_
+Transforming FF to FF+Enable cells in module top:
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$267 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_tready_r[1:0] [0] -> \i2s_loop.i2s_pmod_inst.dac_tready_r [0].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$268 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_tready_r[1:0] [1] -> \i2s_loop.i2s_pmod_inst.dac_tready_r [1].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$276 to $_DFFE_PP_ for $auto$simplemap.cc:309:simplemap_lut$2282 -> \i2s_loop.i2s_pmod_inst.counter [1].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$285 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [0] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [0].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$286 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [1] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [1].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$287 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [2] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [2].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$288 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [3] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [3].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$289 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [4] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [4].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$290 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [5] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [5].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$291 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [6] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [6].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$292 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [7] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [7].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$293 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [8] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [8].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$294 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [9] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [9].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$295 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [10] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [10].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$296 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [11] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [11].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$297 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [12] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [12].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$298 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [13] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [13].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$299 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [14] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [14].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$300 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [15] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [15].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$301 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [16] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [16].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$302 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [17] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [17].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$303 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [18] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [18].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$304 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [19] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [19].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$305 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [20] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [20].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$306 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [21] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [21].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$307 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [22] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [22].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$308 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [23] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [23].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$309 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [24] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [24].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$310 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [25] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [25].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$311 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [26] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [26].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$312 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [27] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [27].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$313 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [28] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [28].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$314 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [29] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [29].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$315 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [30] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [30].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$316 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [31] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [31].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$317 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [32] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [32].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$318 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [33] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [33].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$319 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [34] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [34].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$320 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [35] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [35].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$321 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [36] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [36].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$322 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [37] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [37].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$323 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [38] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [38].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$324 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [39] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [39].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$325 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [40] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [40].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$326 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [41] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [41].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$327 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [42] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [42].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$328 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [43] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [43].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$329 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [44] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [44].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$330 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [45] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [45].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$331 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [46] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [46].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$332 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [47] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [47].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$333 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [48] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [48].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$334 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [49] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [49].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$335 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [50] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [50].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$336 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [51] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [51].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$337 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [52] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [52].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$338 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [53] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [53].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$339 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [54] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [54].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$340 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [55] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [55].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$341 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [56] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [56].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$342 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [57] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [57].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$343 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [58] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [58].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$344 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [59] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [59].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$345 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [60] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [60].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$346 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [61] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [61].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$347 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [62] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [62].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$348 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_l_shift[63:0] [63] -> \i2s_loop.i2s_pmod_inst.dac_l_shift [63].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$349 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [0] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [0].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$350 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [1] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [1].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$351 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [2] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [2].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$352 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [3] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [3].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$353 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [4] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [4].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$354 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [5] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [5].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$355 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [6] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [6].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$356 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [7] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [7].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$357 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [8] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [8].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$358 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [9] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [9].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$359 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [10] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [10].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$360 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [11] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [11].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$361 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [12] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [12].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$362 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [13] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [13].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$363 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [14] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [14].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$364 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [15] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [15].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$365 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [16] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [16].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$366 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [17] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [17].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$367 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [18] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [18].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$368 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [19] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [19].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$369 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [20] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [20].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$370 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [21] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [21].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$371 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [22] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [22].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$372 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [23] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [23].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$373 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [24] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [24].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$374 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [25] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [25].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$375 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [26] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [26].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$376 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [27] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [27].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$377 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [28] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [28].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$378 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [29] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [29].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$379 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [30] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [30].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$380 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [31] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [31].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$381 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [32] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [32].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$382 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [33] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [33].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$383 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [34] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [34].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$384 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [35] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [35].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$385 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [36] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [36].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$386 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [37] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [37].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$387 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [38] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [38].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$388 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [39] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [39].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$389 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [40] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [40].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$390 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [41] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [41].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$391 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [42] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [42].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$392 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [43] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [43].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$393 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [44] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [44].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$394 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [45] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [45].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$395 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [46] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [46].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$396 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [47] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [47].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$397 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [48] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [48].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$398 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [49] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [49].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$399 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [50] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [50].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$400 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [51] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [51].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$401 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [52] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [52].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$402 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [53] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [53].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$403 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [54] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [54].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$404 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [55] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [55].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$405 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [56] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [56].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$406 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [57] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [57].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$407 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [58] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [58].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$408 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [59] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [59].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$409 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [60] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [60].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$410 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [61] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [61].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$411 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [62] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [62].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$412 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_r_shift[63:0] [63] -> \i2s_loop.i2s_pmod_inst.dac_r_shift [63].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$413 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\dac_out[0:0] -> \i2s_loop.i2s_pmod_inst.dac_out.
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$425 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [0] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [0].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$426 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [1] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [1].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$427 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [2] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [2].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$428 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [3] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [3].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$429 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [4] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [4].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$430 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [5] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [5].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$431 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [6] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [6].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$432 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [7] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [7].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$433 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [8] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [8].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$434 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [9] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [9].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$435 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [10] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [10].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$436 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [11] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [11].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$437 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [12] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [12].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$438 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [13] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [13].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$439 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [14] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [14].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$440 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [15] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [15].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$441 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [16] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [16].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$442 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [17] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [17].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$443 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [18] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [18].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$444 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [19] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [19].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$445 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [20] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [20].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$446 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [21] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [21].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$447 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [22] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [22].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$448 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [23] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [23].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$449 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [24] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [24].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$450 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [25] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [25].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$451 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [26] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [26].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$452 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [27] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [27].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$453 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [28] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [28].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$454 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [29] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [29].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$455 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [30] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [30].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$456 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [31] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [31].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$457 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [32] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [32].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$458 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [33] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [33].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$459 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [34] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [34].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$460 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [35] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [35].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$461 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [36] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [36].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$462 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [37] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [37].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$463 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [38] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [38].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$464 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [39] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [39].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$465 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [40] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [40].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$466 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [41] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [41].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$467 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [42] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [42].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$468 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [43] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [43].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$469 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [44] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [44].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$470 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [45] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [45].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$471 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [46] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [46].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$472 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [47] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [47].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$473 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [48] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [48].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$474 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [49] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [49].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$475 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [50] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [50].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$476 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [51] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [51].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$477 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [52] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [52].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$478 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [53] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [53].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$479 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [54] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [54].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$480 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [55] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [55].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$481 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [56] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [56].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$482 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [57] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [57].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$483 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [58] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [58].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$484 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [59] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [59].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$485 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [60] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [60].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$486 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [61] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [61].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$487 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [62] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [62].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$488 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_shift[63:0] [63] -> \i2s_loop.i2s_pmod_inst.adc_r_shift [63].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$489 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [0] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [0].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$490 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [1] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [1].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$491 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [2] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [2].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$492 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [3] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [3].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$493 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [4] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [4].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$494 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [5] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [5].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$495 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [6] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [6].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$496 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [7] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [7].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$497 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [8] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [8].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$498 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [9] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [9].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$499 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [10] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [10].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$500 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [11] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [11].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$501 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [12] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [12].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$502 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [13] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [13].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$503 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [14] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [14].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$504 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [15] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [15].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$505 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [16] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [16].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$506 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [17] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [17].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$507 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [18] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [18].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$508 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [19] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [19].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$509 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [20] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [20].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$510 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [21] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [21].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$511 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [22] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [22].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$512 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [23] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [23].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$513 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [24] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [24].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$514 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [25] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [25].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$515 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [26] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [26].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$516 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [27] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [27].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$517 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [28] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [28].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$518 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [29] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [29].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$519 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [30] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [30].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$520 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [31] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [31].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$521 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [32] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [32].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$522 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [33] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [33].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$523 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [34] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [34].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$524 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [35] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [35].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$525 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [36] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [36].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$526 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [37] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [37].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$527 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [38] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [38].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$528 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [39] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [39].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$529 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [40] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [40].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$530 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [41] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [41].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$531 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [42] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [42].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$532 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [43] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [43].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$533 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [44] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [44].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$534 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [45] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [45].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$535 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [46] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [46].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$536 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [47] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [47].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$537 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [48] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [48].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$538 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [49] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [49].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$539 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [50] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [50].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$540 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [51] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [51].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$541 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [52] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [52].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$542 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [53] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [53].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$543 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [54] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [54].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$544 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [55] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [55].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$545 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [56] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [56].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$546 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [57] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [57].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$547 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [58] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [58].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$548 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [59] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [59].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$549 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [60] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [60].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$550 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [61] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [61].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$551 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [62] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [62].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$552 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_shift[63:0] [63] -> \i2s_loop.i2s_pmod_inst.adc_l_shift [63].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$553 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_tdata_r[31:0] [0] -> \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [0].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$554 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_tdata_r[31:0] [1] -> \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [1].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$555 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_tdata_r[31:0] [2] -> \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [2].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$556 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_tdata_r[31:0] [3] -> \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [3].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$557 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_tdata_r[31:0] [4] -> \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [4].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$558 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_tdata_r[31:0] [5] -> \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [5].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$559 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_tdata_r[31:0] [6] -> \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [6].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$560 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_tdata_r[31:0] [7] -> \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [7].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$561 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_tdata_r[31:0] [8] -> \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [8].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$562 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_tdata_r[31:0] [9] -> \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [9].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$563 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_tdata_r[31:0] [10] -> \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [10].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$564 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_tdata_r[31:0] [11] -> \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [11].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$565 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_tdata_r[31:0] [12] -> \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [12].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$566 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_tdata_r[31:0] [13] -> \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [13].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$567 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_tdata_r[31:0] [14] -> \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [14].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$568 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_tdata_r[31:0] [15] -> \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [15].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$569 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_tdata_r[31:0] [16] -> \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [16].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$570 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_tdata_r[31:0] [17] -> \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [17].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$571 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_tdata_r[31:0] [18] -> \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [18].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$572 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_tdata_r[31:0] [19] -> \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [19].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$573 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_tdata_r[31:0] [20] -> \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [20].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$574 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_tdata_r[31:0] [21] -> \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [21].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$575 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_tdata_r[31:0] [22] -> \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [22].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$576 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_tdata_r[31:0] [23] -> \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [23].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$577 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_tdata_r[31:0] [24] -> \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [24].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$578 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_tdata_r[31:0] [25] -> \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [25].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$579 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_tdata_r[31:0] [26] -> \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [26].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$580 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_tdata_r[31:0] [27] -> \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [27].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$581 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_tdata_r[31:0] [28] -> \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [28].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$582 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_tdata_r[31:0] [29] -> \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [29].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$583 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_tdata_r[31:0] [30] -> \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [30].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$584 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_l_tdata_r[31:0] [31] -> \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [31].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$585 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_tdata_r[31:0] [0] -> \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [0].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$586 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_tdata_r[31:0] [1] -> \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [1].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$587 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_tdata_r[31:0] [2] -> \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [2].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$588 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_tdata_r[31:0] [3] -> \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [3].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$589 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_tdata_r[31:0] [4] -> \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [4].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$590 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_tdata_r[31:0] [5] -> \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [5].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$591 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_tdata_r[31:0] [6] -> \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [6].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$592 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_tdata_r[31:0] [7] -> \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [7].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$593 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_tdata_r[31:0] [8] -> \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [8].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$594 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_tdata_r[31:0] [9] -> \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [9].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$595 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_tdata_r[31:0] [10] -> \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [10].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$596 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_tdata_r[31:0] [11] -> \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [11].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$597 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_tdata_r[31:0] [12] -> \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [12].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$598 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_tdata_r[31:0] [13] -> \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [13].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$599 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_tdata_r[31:0] [14] -> \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [14].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$600 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_tdata_r[31:0] [15] -> \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [15].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$601 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_tdata_r[31:0] [16] -> \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [16].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$602 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_tdata_r[31:0] [17] -> \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [17].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$603 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_tdata_r[31:0] [18] -> \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [18].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$604 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_tdata_r[31:0] [19] -> \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [19].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$605 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_tdata_r[31:0] [20] -> \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [20].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$606 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_tdata_r[31:0] [21] -> \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [21].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$607 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_tdata_r[31:0] [22] -> \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [22].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$608 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_tdata_r[31:0] [23] -> \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [23].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$609 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_tdata_r[31:0] [24] -> \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [24].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$610 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_tdata_r[31:0] [25] -> \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [25].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$611 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_tdata_r[31:0] [26] -> \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [26].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$612 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_tdata_r[31:0] [27] -> \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [27].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$613 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_tdata_r[31:0] [28] -> \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [28].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$614 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_tdata_r[31:0] [29] -> \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [29].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$615 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_tdata_r[31:0] [30] -> \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [30].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$616 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_r_tdata_r[31:0] [31] -> \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [31].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$617 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_tvalid_r[1:0] [0] -> \i2s_loop.i2s_pmod_inst.adc_tvalid_r [0].
+  converting $_DFF_P_ cell $auto$simplemap.cc:420:simplemap_dff$618 to $_DFFE_PP_ for $techmap\i2s_loop.i2s_pmod_inst.$0\adc_tvalid_r[1:0] [1] -> \i2s_loop.i2s_pmod_inst.adc_tvalid_r [1].
+
+4.34. Executing TECHMAP pass (map to technology primitives).
+
+4.34.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/ice40/cells_map.v
+Parsing Verilog input from `/usr/bin/../share/yosys/ice40/cells_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DFF_N_'.
+Generating RTLIL representation for module `\$_DFF_P_'.
+Generating RTLIL representation for module `\$_DFFE_NN_'.
+Generating RTLIL representation for module `\$_DFFE_PN_'.
+Generating RTLIL representation for module `\$_DFFE_NP_'.
+Generating RTLIL representation for module `\$_DFFE_PP_'.
+Generating RTLIL representation for module `\$_DFF_NN0_'.
+Generating RTLIL representation for module `\$_DFF_NN1_'.
+Generating RTLIL representation for module `\$_DFF_PN0_'.
+Generating RTLIL representation for module `\$_DFF_PN1_'.
+Generating RTLIL representation for module `\$_DFF_NP0_'.
+Generating RTLIL representation for module `\$_DFF_NP1_'.
+Generating RTLIL representation for module `\$_DFF_PP0_'.
+Generating RTLIL representation for module `\$_DFF_PP1_'.
+Generating RTLIL representation for module `\$__DFFE_NN0'.
+Generating RTLIL representation for module `\$__DFFE_NN1'.
+Generating RTLIL representation for module `\$__DFFE_PN0'.
+Generating RTLIL representation for module `\$__DFFE_PN1'.
+Generating RTLIL representation for module `\$__DFFE_NP0'.
+Generating RTLIL representation for module `\$__DFFE_NP1'.
+Generating RTLIL representation for module `\$__DFFE_PP0'.
+Generating RTLIL representation for module `\$__DFFE_PP1'.
+Successfully finished Verilog frontend.
+
+4.34.2. Continuing TECHMAP pass.
+Using template \$_DFFE_PP_ for cells of type $_DFFE_PP_.
+Using template \$_DFF_P_ for cells of type $_DFF_P_.
+No more expansions possible.
+<suppressed ~344 debug messages>
+
+4.35. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~1438 debug messages>
+
+4.36. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+4.37. Executing ICE40_FFINIT pass (implement FF init values).
+Handling FF init values in top.
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$618 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_tvalid_r [1] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$293 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [8] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$301 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [16] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$305 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [20] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$275 (SB_DFF): \i2s_loop.i2s_pmod_inst.counter [0] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$276 (SB_DFFE): \i2s_loop.i2s_pmod_inst.counter [1] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$277 (SB_DFF): \i2s_loop.i2s_pmod_inst.counter [2] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$278 (SB_DFF): \i2s_loop.i2s_pmod_inst.counter [3] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$279 (SB_DFF): \i2s_loop.i2s_pmod_inst.counter [4] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$344 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [59] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$303 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [18] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$292 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [7] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$282 (SB_DFF): \i2s_loop.i2s_pmod_inst.counter [7] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$286 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [1] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$297 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [12] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$298 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [13] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$299 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [14] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$343 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [58] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$289 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [4] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$288 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [3] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$302 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [17] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$295 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [10] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$291 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [6] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$294 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [9] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$290 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [5] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$268 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_tready_r [1] = 1
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$267 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_tready_r [0] = 1
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$300 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [15] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$296 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [11] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$306 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [21] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$304 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [19] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$307 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [22] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$309 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [24] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$312 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [27] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$310 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [25] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$311 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [26] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$308 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [23] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$313 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [28] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$314 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [29] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$315 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [30] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$316 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [31] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$317 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [32] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$318 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [33] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$319 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [34] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$320 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [35] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$321 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [36] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$322 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [37] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$323 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [38] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$324 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [39] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$326 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [41] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$287 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [2] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$327 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [42] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$325 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [40] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$281 (SB_DFF): \i2s_loop.i2s_pmod_inst.counter [6] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$328 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [43] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$329 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [44] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$330 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [45] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$331 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [46] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$332 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [47] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$333 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [48] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$334 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [49] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$335 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [50] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$336 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [51] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$337 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [52] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$338 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [53] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$339 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [54] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$340 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [55] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$341 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [56] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$342 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [57] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$280 (SB_DFF): \i2s_loop.i2s_pmod_inst.counter [5] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$593 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [8] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$345 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [60] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$346 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [61] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$347 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [62] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$348 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [63] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$349 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [0] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$350 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [1] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$351 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [2] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$352 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [3] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$353 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [4] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$354 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [5] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$355 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [6] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$285 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_l_shift [0] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$356 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [7] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$358 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [9] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$359 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [10] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$360 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [11] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$361 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [12] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$362 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [13] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$363 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [14] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$364 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [15] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$365 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [16] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$366 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [17] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$367 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [18] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$368 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [19] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$369 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [20] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$370 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [21] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$371 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [22] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$372 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [23] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$373 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [24] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$374 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [25] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$375 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [26] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$376 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [27] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$377 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [28] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$378 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [29] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$379 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [30] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$380 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [31] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$381 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [32] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$382 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [33] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$383 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [34] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$384 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [35] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$385 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [36] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$386 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [37] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$387 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [38] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$388 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [39] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$389 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [40] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$390 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [41] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$391 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [42] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$392 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [43] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$393 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [44] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$394 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [45] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$395 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [46] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$396 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [47] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$397 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [48] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$398 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [49] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$399 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [50] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$400 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [51] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$401 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [52] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$402 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [53] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$403 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [54] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$404 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [55] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$405 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [56] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$406 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [57] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$407 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [58] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$408 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [59] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$409 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [60] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$410 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [61] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$411 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [62] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$412 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [63] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$421 (SB_DFF): \i2s_loop.i2s_pmod_inst.adc_sclk_dly [2] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$414 (SB_DFF): \i2s_loop.i2s_pmod_inst.lrck_dly_2 [0] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$415 (SB_DFF): \i2s_loop.i2s_pmod_inst.lrck_dly_2 [1] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$413 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_out = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$417 (SB_DFF): \i2s_loop.i2s_pmod_inst.adc_lrck_dly [1] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$357 (SB_DFFE): \i2s_loop.i2s_pmod_inst.dac_r_shift [8] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$419 (SB_DFF): \i2s_loop.i2s_pmod_inst.adc_sclk_dly [0] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$420 (SB_DFF): \i2s_loop.i2s_pmod_inst.adc_sclk_dly [1] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$418 (SB_DFF): \i2s_loop.i2s_pmod_inst.adc_lrck_dly [2] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$422 (SB_DFF): \i2s_loop.i2s_pmod_inst.sync_adc_dat [0] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$423 (SB_DFF): \i2s_loop.i2s_pmod_inst.sync_adc_dat [1] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$430 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [5] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$424 (SB_DFF): \i2s_loop.i2s_pmod_inst.sync_adc_dat [2] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$426 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [1] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$427 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [2] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$428 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [3] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$416 (SB_DFF): \i2s_loop.i2s_pmod_inst.adc_lrck_dly [0] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$429 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [4] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$431 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [6] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$432 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [7] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$433 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [8] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$434 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [9] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$435 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [10] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$436 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [11] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$437 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [12] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$438 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [13] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$439 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [14] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$440 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [15] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$441 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [16] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$442 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [17] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$443 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [18] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$444 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [19] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$445 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [20] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$446 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [21] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$447 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [22] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$448 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [23] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$449 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [24] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$450 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [25] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$451 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [26] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$452 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [27] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$453 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [28] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$454 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [29] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$455 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [30] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$456 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [31] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$457 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [32] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$458 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [33] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$459 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [34] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$460 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [35] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$461 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [36] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$462 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [37] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$463 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [38] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$464 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [39] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$465 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [40] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$466 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [41] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$467 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [42] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$468 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [43] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$469 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [44] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$470 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [45] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$471 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [46] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$472 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [47] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$473 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [48] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$474 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [49] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$475 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [50] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$476 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [51] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$477 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [52] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$478 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [53] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$479 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [54] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$480 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [55] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$481 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [56] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$482 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [57] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$483 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [58] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$484 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [59] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$485 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [60] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$486 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [61] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$487 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [62] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$488 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [63] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$489 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [0] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$490 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [1] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$491 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [2] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$492 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [3] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$493 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [4] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$494 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [5] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$495 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [6] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$425 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_shift [0] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$496 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [7] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$498 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [9] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$499 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [10] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$500 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [11] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$501 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [12] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$502 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [13] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$503 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [14] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$504 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [15] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$505 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [16] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$506 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [17] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$507 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [18] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$508 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [19] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$509 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [20] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$510 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [21] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$511 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [22] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$512 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [23] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$513 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [24] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$514 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [25] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$515 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [26] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$516 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [27] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$517 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [28] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$518 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [29] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$519 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [30] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$520 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [31] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$521 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [32] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$522 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [33] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$523 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [34] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$524 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [35] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$525 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [36] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$526 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [37] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$527 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [38] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$528 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [39] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$529 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [40] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$530 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [41] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$531 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [42] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$532 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [43] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$533 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [44] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$534 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [45] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$535 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [46] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$536 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [47] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$537 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [48] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$538 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [49] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$539 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [50] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$540 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [51] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$541 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [52] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$542 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [53] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$543 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [54] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$544 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [55] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$545 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [56] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$546 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [57] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$547 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [58] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$548 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [59] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$549 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [60] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$550 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [61] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$551 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [62] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$552 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [63] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$553 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [0] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$554 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [1] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$555 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [2] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$556 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [3] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$557 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [4] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$558 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [5] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$559 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [6] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$497 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_shift [8] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$560 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [7] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$562 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [9] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$563 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [10] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$564 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [11] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$565 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [12] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$566 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [13] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$567 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [14] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$568 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [15] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$569 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [16] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$570 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [17] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$571 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [18] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$572 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [19] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$573 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [20] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$574 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [21] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$575 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [22] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$576 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [23] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$577 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [24] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$578 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [25] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$579 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [26] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$580 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [27] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$581 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [28] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$582 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [29] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$583 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [30] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$584 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [31] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$585 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [0] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$586 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [1] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$587 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [2] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$588 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [3] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$589 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [4] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$590 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [5] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$591 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [6] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$561 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_l_tdata_r [8] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$592 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [7] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$594 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [9] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$595 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [10] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$596 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [11] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$597 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [12] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$598 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [13] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$599 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [14] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$600 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [15] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$601 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [16] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$602 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [17] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$603 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [18] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$604 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [19] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$605 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [20] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$606 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [21] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$607 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [22] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$608 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [23] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$609 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [24] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$610 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [25] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$611 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [26] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$612 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [27] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$613 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [28] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$614 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [29] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$615 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [30] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$616 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_r_tdata_r [31] = 0
+FF init value for cell $auto$simplemap.cc:420:simplemap_dff$617 (SB_DFFE): \i2s_loop.i2s_pmod_inst.adc_tvalid_r [0] = 0
+
+4.38. Executing ICE40_FFSSR pass (merge synchronous set/reset into FF cells).
+Merging set/reset $_MUX_ cells into SB_FFs in top.
+  Merging $auto$simplemap.cc:277:simplemap_mux$730 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_l_tdata_r [8], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$293 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$738 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_l_tdata_r [16], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$301 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$742 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_l_tdata_r [20], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$305 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$740 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_l_tdata_r [18], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$303 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$729 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_l_tdata_r [7], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$292 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$723 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_l_tdata_r [1], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$286 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$734 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_l_tdata_r [12], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$297 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$735 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_l_tdata_r [13], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$298 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$736 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_l_tdata_r [14], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$299 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$726 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_l_tdata_r [4], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$289 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$725 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_l_tdata_r [3], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$288 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$739 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_l_tdata_r [17], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$302 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$732 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_l_tdata_r [10], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$295 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$728 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_l_tdata_r [6], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$291 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$731 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_l_tdata_r [9], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$294 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$727 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_l_tdata_r [5], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$290 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$737 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_l_tdata_r [15], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$300 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$733 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_l_tdata_r [11], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$296 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$743 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_l_tdata_r [21], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$306 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$741 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_l_tdata_r [19], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$304 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$744 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_l_tdata_r [22], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$307 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$746 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_l_tdata_r [24], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$309 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$749 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_l_tdata_r [27], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$312 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$747 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_l_tdata_r [25], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$310 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$748 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_l_tdata_r [26], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$311 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$745 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_l_tdata_r [23], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$308 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$750 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_l_tdata_r [28], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$313 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$751 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_l_tdata_r [29], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$314 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$752 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_l_tdata_r [30], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$315 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$753 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_l_tdata_r [31], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$316 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$724 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_l_tdata_r [2], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$287 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$850 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_r_tdata_r [0], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$349 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$851 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_r_tdata_r [1], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$350 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$852 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_r_tdata_r [2], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$351 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$853 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_r_tdata_r [3], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$352 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$854 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_r_tdata_r [4], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$353 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$855 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_r_tdata_r [5], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$354 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$856 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_r_tdata_r [6], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$355 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$722 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_l_tdata_r [0], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$285 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$857 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_r_tdata_r [7], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$356 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$859 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_r_tdata_r [9], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$358 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$860 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_r_tdata_r [10], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$359 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$861 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_r_tdata_r [11], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$360 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$862 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_r_tdata_r [12], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$361 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$863 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_r_tdata_r [13], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$362 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$864 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_r_tdata_r [14], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$363 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$865 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_r_tdata_r [15], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$364 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$866 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_r_tdata_r [16], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$365 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$867 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_r_tdata_r [17], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$366 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$868 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_r_tdata_r [18], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$367 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$869 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_r_tdata_r [19], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$368 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$870 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_r_tdata_r [20], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$369 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$871 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_r_tdata_r [21], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$370 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$872 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_r_tdata_r [22], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$371 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$873 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_r_tdata_r [23], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$372 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$874 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_r_tdata_r [24], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$373 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$875 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_r_tdata_r [25], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$374 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$876 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_r_tdata_r [26], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$375 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$877 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_r_tdata_r [27], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$376 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$878 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_r_tdata_r [28], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$377 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$879 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_r_tdata_r [29], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$378 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$880 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_r_tdata_r [30], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$379 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$881 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_r_tdata_r [31], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$380 (SB_DFFE).
+  Merging $auto$simplemap.cc:277:simplemap_mux$858 (A=1'0, B=\i2s_loop.i2s_pmod_inst.adc_r_tdata_r [8], S=$techmap\i2s_loop.i2s_pmod_inst.$logic_and$i2s_pmod.v:81$52_Y) into $auto$simplemap.cc:420:simplemap_dff$357 (SB_DFFE).
+
+4.39. Executing ICE40_OPT pass (performing simple optimizations).
+
+4.39.1. Running ICE40 specific optimizations.
+
+4.39.2. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~2 debug messages>
+
+4.39.3. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+<suppressed ~3909 debug messages>
+Removed a total of 1303 cells.
+
+4.39.4. Executing OPT_RMDFF pass (remove dff with constant values).
+
+4.39.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 64 unused cells and 3928 unused wires.
+<suppressed ~65 debug messages>
+
+4.39.6. Rerunning OPT passes. (Removed registers in this run.)
+
+4.39.7. Running ICE40 specific optimizations.
+
+4.39.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+4.39.9. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+4.39.10. Executing OPT_RMDFF pass (remove dff with constant values).
+
+4.39.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+4.39.12. Finished OPT passes. (There is nothing left to do.)
+
+4.40. Executing TECHMAP pass (map to technology primitives).
+
+4.40.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/ice40/latches_map.v
+Parsing Verilog input from `/usr/bin/../share/yosys/ice40/latches_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DLATCH_N_'.
+Generating RTLIL representation for module `\$_DLATCH_P_'.
+Successfully finished Verilog frontend.
+
+4.40.2. Continuing TECHMAP pass.
+No more expansions possible.
+
+4.41. Executing ABC pass (technology mapping using ABC).
+
+4.41.1. Extracting gate netlist of module `\top' to `<abc-temp-dir>/input.blif'..
+Extracted 115 gates and 198 wires to a netlist network with 82 inputs and 17 outputs.
+
+4.41.1.1. Executing ABC.
+Running ABC command: abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lut <abc-temp-dir>/lutdefs.txt 
+ABC: + strash 
+ABC: + ifraig 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + retime 
+ABC: + strash 
+ABC: + dch -f 
+ABC: + if 
+ABC: + mfs2 
+ABC: + lutpack -S 1 
+ABC: + dress 
+ABC: Total number of equiv classes                =      19.
+ABC: Participating nodes from both networks       =      48.
+ABC: Participating nodes from the first network   =      20. (  30.30 % of nodes)
+ABC: Participating nodes from the second network  =      28. (  42.42 % of nodes)
+ABC: Node pairs (any polarity)                    =      20. (  30.30 % of names can be moved)
+ABC: Node pairs (same polarity)                   =      18. (  27.27 % of names can be moved)
+ABC: Total runtime =     0.01 sec
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+4.41.1.2. Re-integrating ABC results.
+ABC RESULTS:              $lut cells:      130
+ABC RESULTS:        internal signals:       99
+ABC RESULTS:           input signals:       82
+ABC RESULTS:          output signals:       17
+Removing temp directory.
+Removed 0 unused cells and 150 unused wires.
+
+4.42. Executing TECHMAP pass (map to technology primitives).
+
+4.42.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/ice40/cells_map.v
+Parsing Verilog input from `/usr/bin/../share/yosys/ice40/cells_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DFF_N_'.
+Generating RTLIL representation for module `\$_DFF_P_'.
+Generating RTLIL representation for module `\$_DFFE_NN_'.
+Generating RTLIL representation for module `\$_DFFE_PN_'.
+Generating RTLIL representation for module `\$_DFFE_NP_'.
+Generating RTLIL representation for module `\$_DFFE_PP_'.
+Generating RTLIL representation for module `\$_DFF_NN0_'.
+Generating RTLIL representation for module `\$_DFF_NN1_'.
+Generating RTLIL representation for module `\$_DFF_PN0_'.
+Generating RTLIL representation for module `\$_DFF_PN1_'.
+Generating RTLIL representation for module `\$_DFF_NP0_'.
+Generating RTLIL representation for module `\$_DFF_NP1_'.
+Generating RTLIL representation for module `\$_DFF_PP0_'.
+Generating RTLIL representation for module `\$_DFF_PP1_'.
+Generating RTLIL representation for module `\$__DFFE_NN0'.
+Generating RTLIL representation for module `\$__DFFE_NN1'.
+Generating RTLIL representation for module `\$__DFFE_PN0'.
+Generating RTLIL representation for module `\$__DFFE_PN1'.
+Generating RTLIL representation for module `\$__DFFE_NP0'.
+Generating RTLIL representation for module `\$__DFFE_NP1'.
+Generating RTLIL representation for module `\$__DFFE_PP0'.
+Generating RTLIL representation for module `\$__DFFE_PP1'.
+Generating RTLIL representation for module `\$lut'.
+Successfully finished Verilog frontend.
+
+4.42.2. Continuing TECHMAP pass.
+Using template $paramod\$lut\WIDTH=2\LUT=4'1000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'0000111011101110 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'00010000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=2\LUT=4'0100 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'11001010 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'0000101000001100 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'0000001100000101 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'0011010100000000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'1111000100000000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'11110100 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'0000110000001010 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=3\LUT=8'01000000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'0000000011111110 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'1110111100000000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'1010110000000000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'1111111000000000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'0000000011110100 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'0111000101010000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'0010101100100010 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'1100101000000000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'0011111101010000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'1111001100000101 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'0001000111110000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'0000000001001111 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'1100111110100000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'0000010111110011 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'1100101011111111 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'1111110000001010 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'1111001111111010 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=4\LUT=16'0000011101110111 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=1\LUT=2'01 for cells of type $lut.
+No more expansions possible.
+<suppressed ~405 debug messages>
+Removed 0 unused cells and 128 unused wires.
+
+4.43. Executing HIERARCHY pass (managing design hierarchy).
+
+4.43.1. Analyzing design hierarchy..
+Top module:  \top
+
+4.43.2. Analyzing design hierarchy..
+Top module:  \top
+Removed 0 unused modules.
+
+4.44. Printing statistics.
+
+=== top ===
+
+   Number of wires:                119
+   Number of wire bits:            659
+   Number of public wires:          52
+   Number of public wire bits:     576
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                422
+     SB_CARRY                        6
+     SB_DFF                         18
+     SB_DFFE                       262
+     SB_DFFESR                      64
+     SB_LUT4                        72
+
+4.45. Executing CHECK pass (checking for obvious problems).
+checking module top..
+found and reported 0 problems.
+
+4.46. Executing BLIF backend.
+
+End of script. Logfile hash: a704b1dab1
+CPU: user 4.50s system 0.13s, MEM: 59.91 MB total, 50.00 MB resident
+Yosys 0.9 (git sha1 UNKNOWN, gcc 10.2.0 -march=x86-64 -mtune=generic -O2 -fno-plt -fPIC -Os)
+Time spent: 23% 23x opt_expr (1 sec), 19% 23x opt_clean (0 sec), ...
+arachne-pnr -d 1k -p ../Go_Board_Constraints.pcf -P vq100 -o top.txt top.blif
+icepack top.txt top.bin
+rm -f top.blif top.txt
+echo "done!"	
+done!
